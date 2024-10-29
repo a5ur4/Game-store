@@ -1,0 +1,136 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+
+.navbar {
+    width: 250px;
+    height: 100vh;
+    background-color: #161616;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s;
+}
+
+.navbar.collapsed {
+    width: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo svg {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar-title {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.navbar.collapsed .navbar-title {
+    display: none;
+}
+
+.nav-links {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #333;
+}
+
+.nav-link .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-link span {
+    margin-left: 15px;
+}
+
+.navbar.collapsed .nav-link span {
+    display: none;
+}
+
+.navbar.collapsed .nav-link .icon {
+    margin: 0 auto;
+}
+
+.collapse-btn {
+    background: none;
+    border: none;
+    color: #d4d4d4;
+    font-size: 20px;
+    margin: 20px 0;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.navbar.collapsed .collapse-btn {
+    transform: rotate(180deg);
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.toggle-mode {
+    background: none;
+    border: none;
+    color: #d4d4d4;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login,
+.register {
+    background: none;
+    border: 1px solid #d4d4d4;
+    color: #d4d4d4;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.navbar.collapsed .toggle-mode span,
+.navbar.collapsed .auth-buttons {
+    display: none;
+}
