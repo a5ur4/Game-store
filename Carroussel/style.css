@@ -1,0 +1,68 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.carousel img {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
+}
+.carousel img.active {
+    opacity: 1;
+    position: relative;
+}
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.carousel-controls button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.carousel-controls button:nth-child(1) {
+    transform: rotate(180deg);
+}
+.carousel-controls button:hover {
+    transform: scale(1.2);
+}
+.carousel-controls button:nth-child(1):hover {
+    transform: rotate(180deg) scale(1.2);
+}
+/* Progress bar container */
+.progress-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+/* Progress bar */
+.progress-bar {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+}
+/* Active progress bar */
+.progress-bar.active {
+    background-color: #107C10;
+}

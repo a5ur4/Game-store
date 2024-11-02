@@ -49,16 +49,20 @@ body {
 }
 
 .nav-link {
+    width: 60%;
     display: flex;
     align-items: center;
     padding: 15px 20px;
     color: #d4d4d4;
     text-decoration: none;
     transition: 0.2s ease-in-out;
+    margin-left: 30px;
+    border-radius: 5px;
 }
 
 .nav-link:hover {
     background-color: #333;
+    width: 60%;
 }
 
 .nav-link .icon {
@@ -68,6 +72,10 @@ body {
 
 .nav-link span {
     margin-left: 15px;
+}
+
+.navbar.collapsed .nav-link {
+    margin-left: -1px;
 }
 
 .navbar.collapsed .nav-link span {
