@@ -1,0 +1,371 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    display: flex;
+}
+
+.navbar {
+    width: 35%;
+    height: 100vh;
+    background-color: #161616;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s;
+}
+
+.navbar.collapsed {
+    width: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo svg {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar-title {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.navbar.collapsed .navbar-title {
+    display: none;
+}
+
+.nav-links {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #333;
+    width: 75%;
+}
+
+.nav-link .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-link span {
+    margin-left: 15px;
+}
+
+.navbar.collapsed .nav-link {
+    margin-left: -1px;
+}
+
+.navbar.collapsed .nav-link span {
+    display: none;
+}
+
+.navbar.collapsed .nav-link .icon {
+    margin: 0 auto;
+}
+
+.navbar.collapsed .nav-link:hover {
+    width: 100%;
+}
+
+.collapse-btn {
+    background: none;
+    border: none;
+    color: #d4d4d4;
+    font-size: 20px;
+    margin: 20px 0;
+    margin-top: 80px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar.collapsed .collapse-btn {
+    transform: rotate(180deg)
+        scale(0.8);
+}
+
+.footer_navbar {
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.toggle-mode {
+    background: none;
+    border: none;
+    color: #d4d4d4;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login,
+.register {
+    background: none;
+    border: 1px solid #d4d4d4;
+    color: #d4d4d4;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.navbar.collapsed .toggle-mode span,
+.navbar.collapsed .auth-buttons {
+    display: none;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 78%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: -10px;
+    padding-top: 3%;
+}
+.carousel img {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
+    border-radius: 5px;
+}
+.carousel img.active {
+    opacity: 1;
+    position: relative;
+}
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.carousel-controls button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.carousel-controls button:nth-child(1) {
+    transform: rotate(180deg);
+}
+.carousel-controls button:hover {
+    transform: scale(1.2);
+}
+.carousel-controls button:nth-child(1):hover {
+    transform: rotate(180deg) scale(1.2);
+}
+/* Progress bar container */
+.progress-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+/* Progress bar */
+.progress-bar {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+}
+/* Active progress bar */
+.progress-bar.active {
+    background-color: #107C10;
+}
+
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    background-color: #161616;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+    background-color: #1A9F1A;
+}
+
+.payment-icons svg {
+    width: 60px;
+    height: 40px;
+}
+
+.payment-icons svg:nth-child(1) {
+    margin-left: 2.5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #1A9F1A;
+}
+
+.footer-column form input,
+.footer-column form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #1A9F1A;
+    background: #121212;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.form-column form input:focus {
+    outline: none;
+    border: 1px solid #1A9F1A;
+}
+
+.footer-column form button {
+    width: 35%;
+    margin-left: 65%;
+    background-color: #1A9F1A;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-column form button:hover {
+    background-color: #107C10;
+}
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-media a svg {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    transition: transform 0.3s;
+}
+
+.social-media a svg:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #ddd;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom .language-select {
+    margin-bottom: 10px;
+}
+
+.footer-bottom a {
+    color: #1A9F1A;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
