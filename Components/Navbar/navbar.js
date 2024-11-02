@@ -1,8 +1,4 @@
 class Navbar extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     connectedCallback() {
         this.innerHTML = `
         <style>
