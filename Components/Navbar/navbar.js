@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
             }
 
             .navbar {
-                width: 250px;
+                width: 110%;
                 height: 100vh;
                 background-color: #161616;
                 color: white;
@@ -17,6 +17,7 @@ class Navbar extends HTMLElement {
                 flex-direction: column;
                 align-items: center;
                 padding-top: 20px;
+                margin-right: 20px;
                 transition: width 0.3s;
             }
 
@@ -51,7 +52,7 @@ class Navbar extends HTMLElement {
             }
 
             .nav-link {
-                width: 60%;
+                width: 100%;
                 display: flex;
                 align-items: center;
                 padding: 15px 20px;
@@ -64,7 +65,7 @@ class Navbar extends HTMLElement {
 
             .nav-link:hover {
                 background-color: #333;
-                width: 60%;
+                width: 75%;
             }
 
             .nav-link .icon {
@@ -88,6 +89,10 @@ class Navbar extends HTMLElement {
                 margin: 0 auto;
             }
 
+            .navbar.collapsed .nav-link:hover {
+                width: 100%;
+            }
+
             .collapse-btn {
                 background: none;
                 border: none;
@@ -96,13 +101,15 @@ class Navbar extends HTMLElement {
                 margin: 20px 0;
                 margin-top: 80px;
                 cursor: pointer;
+                transition: 0.3s ease-in-out;
             }
 
             .navbar.collapsed .collapse-btn {
-                transform: rotate(180deg);
+                transform: rotate(180deg)
+                    scale(0.8);
             }
 
-            .footer {
+            .footer_navbar {
                 margin-top: auto;
                 text-align: center;
                 padding-bottom: 20px;
