@@ -200,22 +200,9 @@ class Footer extends HTMLElement {
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">Frequently Asked Questions</a></li>
                         <li><a href="#">Order Status</a></li>
-                        <li><a href="#">GameStop Pro Credit Card</a></li>
                         <li><a href="#">Recall Notices</a></li>
                         <li><a href="#">Returns</a></li>
                         <li><a href="#">Store Feedback</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>LEGAL & PRIVACY</h3>
-                    <ul>
-                        <li><a href="#">CA Privacy Rights</a></li>
-                        <li><a href="#">CA Transparency Act</a></li>
-                        <li><a href="#">Conditions of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">GameStop Pro Terms & Conditions</a></li>
-                        <li><a href="#">Card Grading Service Terms & Conditions</a></li>
-                        <li><a href="#">Your Privacy Choices</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">

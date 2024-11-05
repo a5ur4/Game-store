@@ -2,27 +2,24 @@ class Navbar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background-color: #121212;
-            }
-
             .navbar {
-                width: 110%;
-                height: 100vh;
+                width: 250px; /* Define uma largura fixa */
+                height: 100%;
                 background-color: #161616;
                 color: white;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding-top: 20px;
-                margin-right: 20px;
+                // position: fixed; /* Fixa a navbar no lado esquerdo */
+                top: 0;
+                left: 0;
                 transition: width 0.3s;
+                z-index: 1;
             }
 
             .navbar.collapsed {
-                width: 100px;
+                width: 80px; /* Largura reduzida ao colapsar */
             }
 
             .logo {

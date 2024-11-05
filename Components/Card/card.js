@@ -64,7 +64,6 @@ class Card extends HTMLElement {
                 background-color: #107C10;
                 color: white;
                 padding: 10px;
-                padding-bottom: 20px;
                 border-radius: 10px 10px 0 0;
                 box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
             }
@@ -83,13 +82,12 @@ class Card extends HTMLElement {
             .product-price2 {
                 font-size: 18px;
                 font-weight: bold;
-                margin-top: -10px;
             }
 
             .card-buttons {
                 justify-content: flex-end;
                 display: flex;
-                margin-top: -50px;
+                margin-top: -30px;
             }
 
             .global-btn,
@@ -266,12 +264,9 @@ class Card extends HTMLElement {
     }
 
     closeModal() {
-        window.onclick = (event) => {
-            const modal = this.querySelector('#product-modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
+        this.querySelector('.close').addEventListener('click', () => {
+            this.querySelector('#product-modal').style.display = 'none';
+        });
     }
 
     disconnectedCallback() {
