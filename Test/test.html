@@ -9,16 +9,25 @@
     <script src="../Components/Navbar/navbar.js" defer></script>
     <script src="../Components/Footer/footer.js" defer></script>
     <script src="../Components/Carroussel/carroussel.js" defer></script>
+    <script src="../Components/Sales/sales.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav-bar></nav-bar>
+    <nav-bar logo="../images/XboxLogo.svg" title="Xbox series X/S" links='["Home", "About", "Contact"]'></nav-bar>
     <main>
         <carousel-element></carousel-element>
         <div class="cards">
             <card-component></card-component>
             <card-component></card-component>
             <card-component></card-component>
+        </div>
+        <div class="sales">
+            <sales-component text1="Consoles semi-novos" text2="Desconto de" text3="40%"
+                text4="Em consoles usados e recondicionados" image="../images/Group11.png"></sales-component>
+            <sales-component text1="Consoles + acessórios" text2="Leve 1 acessório" text3="Grátis"
+                text4="Na compra de um console" image="../images/image12.png"></sales-component>
+            <sales-component text1="Jogos em oferta" text2="Compre2, leve 1" text3="Grátis"
+                text4="Apenas alguns jogos estão disponíveis" image="../images/Group12.png"></sales-component>
         </div>
         <footer-component></footer-component>
     </main>
