@@ -1,23 +1,5 @@
 /* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #121212;
-    display: flex;
-}
-
-main {
-    width: 100%;
-    margin: 0 auto;
-    margin-left: 80px;
-}
+@import"../styles/global.css";
 
 .cards {
     display: flex;
