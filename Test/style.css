@@ -15,3 +15,31 @@
     justify-content: center;
     padding: 20px;
 }
+
+.cards-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.cards-carousel-inner {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.cards-carousel .card-component {
+    min-width: 200px; /* Ajuste conforme necessário */
+    margin: 0 10px;
+}
+
+/* Animação de rolagem */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
