@@ -11,7 +11,7 @@ class Navbar extends HTMLElement {
         this.innerHTML = `
         <style>
             .navbar {
-                width: 250px; /* Define uma largura fixa */
+                width: 250px;
                 height: 100%;
                 background-color: #161616;
                 color: white;
@@ -19,15 +19,17 @@ class Navbar extends HTMLElement {
                 flex-direction: column;
                 align-items: center;
                 padding-top: 20px;
-               // position: fixed; /* Fixa a navbar no lado esquerdo */
+                position: fixed; 
                 top: 0;
                 left: 0;
                 transition: width 0.3s;
                 z-index: 1;
+                border-right: 3px solid #1A9F1A;
+                border-radius: 0 20px 20px 0;
             }
 
             .navbar.collapsed {
-                width: 80px; /* Largura reduzida ao colapsar */
+                width: 80px; 
             }
 
             .logo {
@@ -95,7 +97,7 @@ class Navbar extends HTMLElement {
             }
 
             .navbar.collapsed .nav-link:hover {
-                width: 100%;
+                width: 150%;
             }
 
             .collapse-btn {

@@ -1,8 +1,13 @@
 class Card extends HTMLElement {
     connectedCallback() {
+        const image = this.getAttribute('image');
+        const badge = this.getAttribute('badge');
+        const name = this.getAttribute('name');
+        const subtitle = this.getAttribute('subtitle') || '';
+        const price = this.getAttribute('price');
+
         this.innerHTML = `
         <style>
-            /* Card Style */
             .card {
                 margin: 20px;
                 width: 225px;
@@ -12,13 +17,20 @@ class Card extends HTMLElement {
                 overflow: hidden;
                 position: relative;
                 transition: transform 0.3s;
-                background-image: url('https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png');
-                background-size: cover;
-                background-position: center;
             }
 
             .card:hover {
                 transform: scale(1.05);
+            }
+
+            .card img.background-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
             }
 
             .badge {
@@ -30,12 +42,11 @@ class Card extends HTMLElement {
                 border-radius: 5px;
                 font-size: 12px;
                 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+                z-index: 1;
             }
 
             .badge img {
-                width: 65px;
-                height: 29px;
-                margin-right: 5px;
+                width: 50px;
             }
 
             .badge2 {
@@ -48,12 +59,7 @@ class Card extends HTMLElement {
                 border-radius: 5px;
                 font-size: 12px;
                 box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-            }
-
-            .product-image {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
+                z-index: 1;
             }
 
             .card-content {
@@ -66,13 +72,20 @@ class Card extends HTMLElement {
                 padding: 10px;
                 border-radius: 10px 10px 0 0;
                 box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 1;
             }
 
             .product-name {
                 text-align: center;
                 font-size: 18px;
                 font-weight: bold;
+            }
+
+            .product-subtitle {
+                text-align: center;
+                font-size: 10px;
                 margin-bottom: 20px;
+                font-weight: 600;
             }
 
             .product-price {
@@ -91,7 +104,8 @@ class Card extends HTMLElement {
             }
 
             .global-btn,
-            .more-info-btn {
+            .more-info-btn,
+            .share-btn {
                 background-color: #1e1e1e;
                 color: white;
                 border: none;
@@ -99,26 +113,14 @@ class Card extends HTMLElement {
                 font-size: 12px;
                 border-radius: 10px;
                 cursor: pointer;
+                z-index: 1;
             }
 
-            .share-btn {
-                background-color: #1e1e1e;
-                border: none;
-                height: 30px;
-                width: 30px;
-                align-items: center;
-                text-align: center;
-                font-size: 12px;
-                border-radius: 10px;
-                cursor: pointer;
-                margin-left: 10px;
-            }
-
-            .share-btn img{
+            .share-btn img {
                 height: 15px;
                 width: 15px;
             }
-
+            
             /* Modal Style */
             .modal {
                 display: none;
@@ -155,6 +157,11 @@ class Card extends HTMLElement {
 
             .modal-content h2 {
                 font-size: 24px;
+                color: #107C10;
+            }
+
+            .modal-content h3 {
+                font-size: 18px;
                 margin-bottom: 10px;
                 color: #107C10;
             }
@@ -211,18 +218,19 @@ class Card extends HTMLElement {
                 color: #ff4040;
             }
         </style>
-
-            <div class="card" onclick="openModal()">
+            <div class="card">
+                <img src="${image}" class="background-image" alt="Background Image">
                 <div class="badge">
-                    <img src="../../images/image 7.svg" alt="">
+                    <img src="${badge}" alt="">
                 </div>
                 <div class="badge2">
                     <button class="global-btn">Global</button>
                 </div>
                 <div class="card-content">
-                    <h3 class="product-name">Nome do Produto</h3>
+                    <h3 class="product-name">${name}</h3>
+                    <h5 class="product-subtitle">${subtitle}</h5>
                     <p class="product-price">A partir de </p>
-                    <p class="product-price2">R$ 00,00</p>
+                    <p class="product-price2">${price}</p>
                     <div class="card-buttons">
                         <button class="share-btn">
                             <img src="../../images/share-nodes-svgrepo-com.svg" alt="">
@@ -237,33 +245,27 @@ class Card extends HTMLElement {
             <!-- Modal -->
             <div id="product-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
+                    <span class="close">&times;</span>
                     <div>
-                        <img src="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png" alt="">
+                        <img src="${image}" alt="">
                     </div>
                     <div>
-                        <h2>Nome do Produto</h2>
-                        </br>
+                        <h2>${name}</h2>
+                        <h3>${subtitle}</h3>
+                        <br>
                         <p>Descrição detalhada do produto ou jogo. Informações sobre a história, jogabilidade, preço e outras
                             características importantes.</p>
                         <p>Plataforma: Xbox Series X|S</p>
-                        <p>Preço: R$ 00,00</p>
+                        <p>Preço: ${price}</p>
                     </div>
                 </div>
             </div>
-        `
+        `;
 
-        this.openModal();
-        this.closeModal();
-    }
-
-    openModal() {
         this.querySelector('.card').addEventListener('click', () => {
             this.querySelector('#product-modal').style.display = 'flex';
         });
-    }
 
-    closeModal() {
         this.querySelector('.close').addEventListener('click', () => {
             this.querySelector('#product-modal').style.display = 'none';
         });
