@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../styles/home.css">
     <script src="../Components/Card/card.js" defer></script>
     <script src="../Components/Navbar/navbar.js" defer></script>
     <script src="../Components/Footer/footer.js" defer></script>
@@ -13,10 +13,7 @@
     <script src="../Components/Categories/categories.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <section>
-        <nav-bar logo="../images/XboxLogo.svg" title="Xbox series X/S" links='["Home", "About", "Contact"]'></nav-bar>
-    </section>
+    <nav-bar logo="../images/XboxLogo.svg" title="Xbox series X/S" links='["Home", "About", "Contact"]'></nav-bar>
     <main>
         <carousel-element></carousel-element>
         <div class="cards">
@@ -116,7 +113,6 @@
             const carouselContainer = document.querySelector('.cards-carousel-inner');
             const cards = Array.from(carouselContainer.children);
             
-            // Duplicar os cards para criar o efeito de rolagem infinita
             cards.forEach(card => {
                 const clone = card.cloneNode(true);
                 carouselContainer.appendChild(clone);

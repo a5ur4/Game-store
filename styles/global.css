@@ -20,9 +20,35 @@ body {
     background-image: radial-gradient(var(--darkGreen) 5%, transparent 0);
     background-size: 35px 35px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
     width: 100%;
     margin: 0 auto;
+    padding: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+
+    main {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        width: 60%;
+    }
 }

@@ -23,7 +23,7 @@ class Navbar extends HTMLElement {
                 top: 0;
                 left: 0;
                 transition: width 0.3s;
-                z-index: 1;
+                z-index: 2;
                 border-right: 3px solid #1A9F1A;
                 border-radius: 0 20px 20px 0;
             }
@@ -175,7 +175,7 @@ class Navbar extends HTMLElement {
                 <a href="${link1}" class="nav-link" id="link1">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-catalog">
-                        <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z" fill="#107C10"/>
+                        <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z" fill="#B8ADB7"/>
                     </svg> 
                 <span>Início</span>
                 </a>
