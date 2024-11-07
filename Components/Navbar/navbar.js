@@ -30,6 +30,7 @@ class Navbar extends HTMLElement {
 
             .navbar.collapsed {
                 width: 80px; 
+                background: rgba(0,0,0,0.5);
             }
 
             .logo {
@@ -130,6 +131,10 @@ class Navbar extends HTMLElement {
                 align-items: center;
                 font-size: 14px;
                 cursor: pointer;
+            }
+
+            .navbar.collapsed .toggle-mode {
+                display: none;
             }
 
             .auth-buttons {
