@@ -17,6 +17,22 @@ class Categories {
         $stmt->execute();
         return $stmt;
     }
+    
+    public function read_single() {
+        $query = "SELECT * FROM " . $this->table . " WHERE id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $this->id);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row) {
+            $this->name = $row['name'];
+            $this->image_url = $row['image_url'];
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public function register() {
         $query = "INSERT INTO " . $this->table . " SET name = :name, image_url = :image_url";

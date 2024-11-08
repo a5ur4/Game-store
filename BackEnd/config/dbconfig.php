@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $db_name = "game_store";
+    private $db_name = "WEBDB";
     private $username = "root";
     private $password = "@J3nip4p0";
     public $conn;

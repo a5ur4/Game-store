@@ -1,7 +1,7 @@
 <?php
 // Inclua o arquivo de conexão com o banco de dados e o modelo Games
-include_once '../config/dbconfig.php';
-include_once '../models/Games.php';
+include_once __DIR__ . '/../config/dbconfig.php';
+include_once __DIR__ . '/../models/Games.php';
 
 class GamesController {
     private $conn;
