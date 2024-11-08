@@ -1,0 +1,39 @@
+@import "../styles/global.css";
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container:nth-child(1) {
+    margin-top: 40px;
+}
+
+.category-card {
+    position: relative; /* Tornando o contêiner relativo */
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.category-card:hover {
+    transform: scale(1.1); /* Aumentando a imagem em 10% */
+}
+
+.category-card img {
+    width: 350px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.category-card h2 {
+    font-size: 1.5rem;
+    position: absolute; /* Posicionando o texto sobre a imagem */
+    bottom: 10px; /* Distância da parte inferior */
+    left: 10px; /* Distância da parte esquerda */
+    color: white; /* Cor do texto para contraste */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    padding: 5px; /* Espaçamento ao redor do texto */
+    border-radius: 0.25rem;
+}

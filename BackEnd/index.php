@@ -18,16 +18,16 @@ function getBodyRequest() {
 }
 
 // Função para extrair a rota do URL
-function getRoutePath($requestUrl) {
-    $url = explode('/', $requestUrl);
-    return isset($url[1]) ? $url[1] : ''; // Ajuste para garantir que a URL correta seja extraída
+function getRoutePath($url) {
+    $base = '/api'; // Define o prefixo da API, caso necessário
+    return str_replace($base, '', parse_url($url, PHP_URL_PATH));
 }
 
 $route = getRoutePath($requestUrl);
 
 // Definindo as rotas e métodos
 switch ($route) {
-    case 'games':
+    case '/games':
         $controller = new GamesController();
         
         switch ($method) {
@@ -72,7 +72,7 @@ switch ($route) {
         }
         break;
 
-    case 'categories':
+    case '/categories':
         $controller = new CategoriesController();
         
         switch ($method) {

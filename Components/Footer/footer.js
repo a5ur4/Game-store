@@ -4,6 +4,7 @@ class Footer extends HTMLElement {
             <style>
                 /* Footer */
                 .footer {
+                    margin-top: 40px;
                     background-color: #161616;
                 }
 
