@@ -2,18 +2,6 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <style>
-                * {
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                }
-
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #121212;
-                    color: #ffffff;
-                }
-
                 /* Footer */
                 .footer {
                     background-color: #161616;
