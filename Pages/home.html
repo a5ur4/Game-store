@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../styles/home.css">
     <script src="../Components/Card/card.js" defer></script>
     <script src="../Components/Navbar/navbar.js" defer></script>
@@ -13,7 +13,17 @@
     <script src="../Components/Categories/categories.js" defer></script>
 </head>
 <body>
-    <nav-bar logo="../images/XboxLogo.svg" title="Xbox series X/S" links='["Home", "About", "Contact"]'></nav-bar>
+    <button id="language-toggle" onclick="toggleLanguage()">English</button>
+    <nav-bar 
+        logo="../../images/XboxLogo.svg" 
+        title="Xbox series X/S" 
+        links='[
+            {"href": "home.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
+            {"href": "catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
+            {"href": "exclusive.html", "icon": "../../images/navbar/exclusivos.svg", "label": "Exclusivos"},
+            {"href": "categories.html", "icon": "../../images/navbar/categorias.svg", "label": "Categorias"}
+        ]'
+    ></nav-bar>
     <main>
         <carousel-element></carousel-element>
         <div class="cards">
@@ -21,7 +31,7 @@
             <hr/>
             <div class="top_sales">
                 <card-component
-                    image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
+                image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                     badge="../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
                 <card-component
                     image="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png"
@@ -33,11 +43,11 @@
         </div>
         <div class="sales">
             <sales-component text1="Consoles semi-novos" text2="Desconto de" text3="40%"
-                text4="Em consoles usados e recondicionados" image="../images/Group11.png"></sales-component>
+                text4="Em consoles usados e recondicionados" image="../images/sales/Group11.png"></sales-component>
             <sales-component text1="Consoles + acessórios" text2="Leve 1 acessório" text3="Grátis"
-                text4="Na compra de um console" image="../images/image12.png"></sales-component>
+                text4="Na compra de um console" image="../images/sales/image12.png"></sales-component>
             <sales-component text1="Jogos em oferta" text2="Compre2, leve 1" text3="Grátis"
-                text4="Apenas alguns jogos estão disponíveis" image="../images/Group12.png"></sales-component>
+                text4="Apenas alguns jogos estão disponíveis" image="../images/sales/Group12.png"></sales-component>
         </div>
         <div class="cards">
             <h1>Categorias.<a href="../Pages/categories.html"> Ver Todas.</a></h1>
@@ -75,8 +85,8 @@
             <hr>
         </div>
         <div class="banners">
-            <img src="../images/Group 4.png" alt="">
-            <img src="../images/Group 5.png" alt="">
+            <img src="../images/banners/Group 4.png" alt="">
+            <img src="../images/banners/Group 5.png" alt="">
         </div>    
         <div class="cards-carousel">
             <div class="cards-carousel-inner">
@@ -106,18 +116,53 @@
             </card-component>
             </div>
         </div>    
-        <footer-component></footer-component>
+        <footer-component id="footer-text"></footer-component>
     </main>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselContainer = document.querySelector('.cards-carousel-inner');
-            const cards = Array.from(carouselContainer.children);
+        // Objeto com textos em inglês e português
+        const texts = {
+            en: {
+                bestSellersTitle: "Best sellers of the week.",
+                viewAll: "View All",
+                categoriesTitle: "Categories.",
+                consoles: "Used Consoles",
+                discount: "Discount of",
+                consoleDetails: "On used and refurbished consoles",
+                more: "Take one accessory for free",
+                footerText: "Contact us for more information.",
+            },
+            pt: {
+                bestSellersTitle: "Mais vendidos da semana.",
+                viewAll: "Ver Todos",
+                categoriesTitle: "Categorias.",
+                consoles: "Consoles semi-novos",
+                discount: "Desconto de",
+                consoleDetails: "Em consoles usados e recondicionados",
+                more: "Leve 1 acessório Grátis",
+                footerText: "Entre em contato para mais informações.",
+            },
+        };
+
+        let currentLanguage = 'pt';
+
+        // Função para alternar o idioma
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
+            document.getElementById("language-toggle").innerText = currentLanguage === 'en' ? 'Português' : 'English';
+
+            // Atualiza os textos com base no idioma selecionado
+            document.getElementById("best-sellers-title").innerHTML = `${texts[currentLanguage].bestSellersTitle} <a href="#">${texts[currentLanguage].viewAll}</a>`;
+            document.getElementById("categories-title").innerHTML = `${texts[currentLanguage].categoriesTitle} <a href="../Pages/categories.html">${texts[currentLanguage].viewAll}</a>`;
             
-            cards.forEach(card => {
-                const clone = card.cloneNode(true);
-                carouselContainer.appendChild(clone);
-            });
-        });
+            // Atualiza os atributos de texto dos componentes de vendas
+            document.querySelectorAll(".sales-component")[0].setAttribute("text1", texts[currentLanguage].consoles);
+            document.querySelectorAll(".sales-component")[0].setAttribute("text2", texts[currentLanguage].discount);
+            document.querySelectorAll(".sales-component")[0].setAttribute("text4", texts[currentLanguage].consoleDetails);
+            document.querySelectorAll(".sales-component")[1].setAttribute("text2", texts[currentLanguage].more);
+
+            // Atualiza o texto do rodapé
+            document.getElementById("footer-text").innerText = texts[currentLanguage].footerText;
+        }
     </script>
 </body>
 </html>

@@ -6,19 +6,23 @@
     --gray: #171B1D;
     --lightGreen: #1A9F1A;
     --darkGreen: #107C10;
+    --background-color: var(--black);
+    --text-color: var(--white);
+    --background-image: radial-gradient(var(--darkGreen) 5%, transparent 0);
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background: var(--black);
-    background-image: radial-gradient(var(--darkGreen) 5%, transparent 0);
+    background-color: var(--background-color);
+    background-image: var(--background-image);
     background-size: 35px 35px;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,5 +31,5 @@ body {
 main {
     width: 100%;
     margin: 0 auto;
-    color: var(--white);
+    color: var(--text-color);
 }

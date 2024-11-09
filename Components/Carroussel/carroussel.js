@@ -62,8 +62,8 @@ class Carroussel extends HTMLElement {
             }
         </style>
         <div class="carousel">
-            <img src="../../images/Banner1.png" class="active" alt="Image 1">
-            <img src="../../images/Banner2.png" alt="Image 2">
+            <img src="../../images/carroussel/Banner1.png" class="active" alt="Image 1">
+            <img src="../../images/carroussel/Banner2.png" alt="Image 2">
             <div class="carousel-controls">
                 <button id="prev">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

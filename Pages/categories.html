@@ -13,11 +13,20 @@
     <script src="../Components/Categories/categories.js" defer></script>
 </head>
 <body>
-    <nav-bar logo="../images/XboxLogo.svg" title="Xbox series X/S" links='["home", "About", "Contact"]'></nav-bar>
+    <nav-bar 
+        logo="../../images/XboxLogo.svg" 
+        title="Xbox series X/S" 
+        links='[
+            {"href": "home.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
+            {"href": "catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
+            {"href": "exclusive.html", "icon": "../../images/navbar/exclusivos.svg", "label": "Exclusivos"},
+            {"href": "categories.html", "icon": "../../images/navbar/categorias.svg", "label": "Categorias"}
+        ]'
+    ></nav-bar>
     <main>
         <div class="container">
             <div class="category-card">
-                <a href="">
+                <a href="categories/action.html">
                     <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.1920x1080.jpg?t=1728574899" alt="">
                     <h2>Ação</h2>
                 </a>
