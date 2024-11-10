@@ -1,0 +1,100 @@
+@import "../styles/global.css";
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.news-card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+}
+
+.newscard-content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+}
+
+.newscard-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+section h1 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-left: 90px;
+}
+
+section h1 a {
+    color: var(--lightGreen);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+section h1 a:hover {
+    color: var(--darkGreen);
+}
+
+section hr {
+    width: 80%;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+.highlights {
+    display: flex;
+    justify-content: center;
+}
+
+.highlights div {
+    height: auto;
+    width: 250px;
+    margin: 23px;
+    transition: 0.2s ease-in-out;
+}
+
+.highlights div:hover {
+    transform: translateY(-10px);
+}
+
+.highlights div a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.highlights div img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.highlights div p {
+    font-weight: bold;
+    width: 100%;
+    text-align: left
+}
+

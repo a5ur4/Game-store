@@ -13,7 +13,6 @@
     <script src="../Components/Categories/categories.js" defer></script>
 </head>
 <body>
-    <button id="language-toggle" onclick="toggleLanguage()">English</button>
     <nav-bar 
         logo="../../images/XboxLogo.svg" 
         title="Xbox series X/S" 
@@ -118,51 +117,5 @@
         </div>    
         <footer-component id="footer-text"></footer-component>
     </main>
-    <script>
-        // Objeto com textos em inglês e português
-        const texts = {
-            en: {
-                bestSellersTitle: "Best sellers of the week.",
-                viewAll: "View All",
-                categoriesTitle: "Categories.",
-                consoles: "Used Consoles",
-                discount: "Discount of",
-                consoleDetails: "On used and refurbished consoles",
-                more: "Take one accessory for free",
-                footerText: "Contact us for more information.",
-            },
-            pt: {
-                bestSellersTitle: "Mais vendidos da semana.",
-                viewAll: "Ver Todos",
-                categoriesTitle: "Categorias.",
-                consoles: "Consoles semi-novos",
-                discount: "Desconto de",
-                consoleDetails: "Em consoles usados e recondicionados",
-                more: "Leve 1 acessório Grátis",
-                footerText: "Entre em contato para mais informações.",
-            },
-        };
-
-        let currentLanguage = 'pt';
-
-        // Função para alternar o idioma
-        function toggleLanguage() {
-            currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
-            document.getElementById("language-toggle").innerText = currentLanguage === 'en' ? 'Português' : 'English';
-
-            // Atualiza os textos com base no idioma selecionado
-            document.getElementById("best-sellers-title").innerHTML = `${texts[currentLanguage].bestSellersTitle} <a href="#">${texts[currentLanguage].viewAll}</a>`;
-            document.getElementById("categories-title").innerHTML = `${texts[currentLanguage].categoriesTitle} <a href="../Pages/categories.html">${texts[currentLanguage].viewAll}</a>`;
-            
-            // Atualiza os atributos de texto dos componentes de vendas
-            document.querySelectorAll(".sales-component")[0].setAttribute("text1", texts[currentLanguage].consoles);
-            document.querySelectorAll(".sales-component")[0].setAttribute("text2", texts[currentLanguage].discount);
-            document.querySelectorAll(".sales-component")[0].setAttribute("text4", texts[currentLanguage].consoleDetails);
-            document.querySelectorAll(".sales-component")[1].setAttribute("text2", texts[currentLanguage].more);
-
-            // Atualiza o texto do rodapé
-            document.getElementById("footer-text").innerText = texts[currentLanguage].footerText;
-        }
-    </script>
 </body>
 </html>

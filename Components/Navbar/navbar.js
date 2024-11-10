@@ -122,15 +122,17 @@ class Navbar extends HTMLElement {
             .toggle-mode {
                 background: none;
                 border: none;
-                color: #d4d4d4;
+                color: var(--text-color);
                 display: flex;
                 align-items: center;
                 font-size: 14px;
                 cursor: pointer;
             }
 
-            .navbar.collapsed .toggle-mode {
-                display: none;
+            .toggle-mode .mode-icon {
+                width: 40px; /* Tamanho da imagem */
+                height: 40px;
+                margin-right: 8px; /* Espaçamento entre a imagem e o texto */
             }
 
             .auth-buttons {
@@ -181,7 +183,10 @@ class Navbar extends HTMLElement {
                 </svg>
             </button>
             <div class="footer_navbar">
-                <button class="toggle-mode">Modo Escuro</button>
+                <button class="toggle-mode">
+                    <img src="../../images/navbar/solar_moon-bold.png" alt="Tema" class="mode-icon" />
+                    <span>Modo Escuro</span>
+                </button>
             </div>
         </div>
         `
@@ -201,7 +206,9 @@ class Navbar extends HTMLElement {
 
     toggleMode() {
         const toggleModeBtn = this.querySelector(".toggle-mode");
-        
+        const modeText = toggleModeBtn.querySelector("span");
+        const modeIcon = toggleModeBtn.querySelector(".mode-icon");
+    
         toggleModeBtn.addEventListener("click", () => {
             const isDarkMode = document.documentElement.style.getPropertyValue('--background-color') === '#161616';
     
@@ -210,13 +217,15 @@ class Navbar extends HTMLElement {
                 document.documentElement.style.setProperty('--background-color', '#DADADA');
                 document.documentElement.style.setProperty('--text-color', '#161616');
                 document.documentElement.style.setProperty('--background-image', 'radial-gradient(var(--lightGreen) 5%, transparent 0)');
-                toggleModeBtn.textContent = "Modo Escuro";
+                modeText.textContent = "Modo Escuro";
+                modeIcon.src = "../../images/navbar/solar_sun-bold.png";
             } else {
                 // Modo escuro
                 document.documentElement.style.setProperty('--background-color', '#161616');
                 document.documentElement.style.setProperty('--text-color', '#DADADA');
                 document.documentElement.style.setProperty('--background-image', 'radial-gradient(var(--darkGreen) 5%, transparent 0)');
-                toggleModeBtn.textContent = "Modo Claro";
+                modeText.textContent = "Modo Claro";
+                modeIcon.src = "../../images/navbar/solar_moon-bold.png";
             }
     
             // Atualizar o fundo e a cor do texto da página inteira
