@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Components/Navbar/navbar.js" defer></script>
+    <script src="../Components/Footer/footer.js" defer></script>
+    <script src="../Components/Card/card.js" defer></script>
+    <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/about.css">
     <title>Sobre</title>
 </head>
 <body>
-    
+    <nav-bar logo="../../images/XboxLogo.svg" title="Xbox series X/S" links='[
+        {"href": "../index.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
+        {"href": "catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
+        {"href": "exclusive.html", "icon": "../../images/navbar/exclusivos.svg", "label": "Exclusivos"},
+        {"href": "categories.html", "icon": "../../images/navbar/categorias.svg", "label": "Categorias"},
+        {"href": "about.html", "icon": "../../images/navbar/sobre.svg", "label": "Sobre"}
+    ]'></nav-bar>
+    <main>
+        <footer-component id="footer-text"></footer-component>
+    </main>
 </body>
 </html>
