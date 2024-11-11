@@ -1,0 +1,31 @@
+@import"../styles/global.css";
+
+.top_sales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+hr {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid var(--lightGreen);
+} 
+
+.seeMoreButton {
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--lightGreen);
+    transition: 0.3s ease-in-out;
+}
+
+.seeMoreButton:hover {
+    color: var(--darkGreen);
+}

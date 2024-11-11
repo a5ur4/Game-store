@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/catalog.css">
+    <script src="../Components/Navbar/navbar.js" defer></script>
+    <script src="../Components/Footer/footer.js" defer></script>
+    <script src="../Components/Card/card.js" defer></script>
+    <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
+    <title>Catálogo</title>
+</head>
+
+<body>
+    <nav-bar logo="../../images/XboxLogo.svg" title="Xbox series X/S" links='[
+        {"href": "home.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
+        {"href": "catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
+        {"href": "exclusive.html", "icon": "../../images/navbar/exclusivos.svg", "label": "Exclusivos"},
+        {"href": "categories.html", "icon": "../../images/navbar/categorias.svg", "label": "Categorias"}
+    ]'></nav-bar>
+    
+    <main>
+        <div class="search-bar">
+            <input type="search" id="search" placeholder="Pesquisar jogos">
+        </div>
+
+        <hr>
+
+        <!-- Contêiner para os jogos -->
+        <div id="games-container" class="top_sales"></div>
+
+        <!-- Botão para ver mais -->
+        <hr>
+        <button id="load-more" class="seeMoreButton">Ver Mais</button>
+
+        <footer-component id="footer-text"></footer-component>
+    </main>
+
+
+    <script>
+        // Dados dos jogos
+        const games = Array.from({ length: 20 }, (_, i) => ({
+            image: ``,
+            badge: "../../images/image7.svg",
+            name: `Game ${i + 1}`,
+            price: `R$ ${(i + 1) * 10},00`
+        }));
+
+        // Controla quantos jogos estão visíveis
+        let visibleGames = 12;
+
+        // Função para renderizar jogos
+        function renderGames() {
+            const gamesContainer = document.getElementById("games-container");
+            gamesContainer.innerHTML = ""; // Limpa o contêiner antes de renderizar
+            
+            games.slice(0, visibleGames).forEach(game => {
+                const card = document.createElement("card-component");
+                card.setAttribute("image", game.image);
+                card.setAttribute("badge", game.badge);
+                card.setAttribute("name", game.name);
+                card.setAttribute("price", game.price);
+                gamesContainer.appendChild(card);
+            });
+
+            // Esconde o botão se todos os jogos estiverem visíveis
+            document.getElementById("load-more").style.display = visibleGames >= games.length ? "none" : "block";
+        }
+
+        // Event listener para o botão de "Ver Mais"
+        document.getElementById("load-more").addEventListener("click", () => {
+            visibleGames += 12; // Carrega mais 12 jogos
+            renderGames(); // Renderiza os jogos novamente
+        });
+
+        // Função para filtrar jogos
+        document.getElementById("search").addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll("card-component");
+
+            cards.forEach(card => {
+                const gameName = card.getAttribute("name").toLowerCase();
+                card.style.display = gameName.includes(searchTerm) ? "block" : "none";
+            });
+        });
+
+        // Renderiza os jogos iniciais
+        renderGames();
+    </script>
+</body>
+
+</html>
