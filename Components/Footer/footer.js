@@ -46,6 +46,10 @@ class Footer extends HTMLElement {
                     list-style-type: none;
                 }
 
+                .footer-column ul li {
+                    margin-bottom: 5px;
+                }
+
                 .footer-column ul li a {
                     color: #ffffff;
                     text-decoration: none;
@@ -184,24 +188,23 @@ class Footer extends HTMLElement {
                 </div>
                 <div class="footer-content">
                     <div class="footer-column">
-                        <h3>GET HELP</h3>
+                        <h3>AJUDA</h3>
                         <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Frequently Asked Questions</a></li>
-                            <li><a href="#">Order Status</a></li>
-                            <li><a href="#">Recall Notices</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Store Feedback</a></li>
+                            <li><a href="#">Como comprar</a></li>
+                            <li><a href="#">Formas de pagamento</a></li>
+                            <li><a href="#">Trocas e devoluções</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Termos de uso</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h3>ABOUT US</h3>
+                        <h3>VENDA SEUS JOGOS</h3>
                         <ul>
-                            <li><a href="#">Accessibility</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Investors</a></li>
+                            <li><a href="#">Como vender</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Termos de uso</a></li>
+                            <li><a href="#">Venda agora</a></li>
+                            <li><a href="#">Contato</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">

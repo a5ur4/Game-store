@@ -47,6 +47,7 @@ header img {
     position: relative; /* Tornando o contêiner relativo */
     margin: 20px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .category-card:hover {
