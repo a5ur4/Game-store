@@ -33,3 +33,26 @@ main {
     margin: 0 auto;
     color: var(--text-color);
 }
+
+.search-bar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid var(--lightGreen);
+    color: var(--white);
+    border-radius: 0.25rem;
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border: 2px solid var(--darkGreen);
+    transform: scale(1.1);
+}
