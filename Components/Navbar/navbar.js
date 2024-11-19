@@ -22,6 +22,7 @@ class Navbar extends HTMLElement {
                 z-index: 2;
                 border-right: 3px solid #1A9F1A;
                 border-radius: 0 20px 20px 0;
+                font-family: var(--Montserrat), sans-serif;
             }
 
             .navbar.collapsed {

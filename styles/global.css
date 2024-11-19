@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap');
+}
+
+@font-face {
+    font-family: 'Silkscreen', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 }
 
 :root {
@@ -13,13 +17,14 @@
     --background-color: var(--black);
     --text-color: var(--white);
     --background-image: radial-gradient(var(--darkGreen) 5%, transparent 0);
+    --Montserrat: 'Montserrat', sans-serif;
+    --Silkscreen: 'Silkscreen', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -33,6 +38,7 @@ body {
 }
 
 main {
+    font-family: var(--Montserrat), sans-serif;
     width: 100%;
     margin: 0 auto;
     color: var(--text-color);
