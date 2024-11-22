@@ -186,7 +186,6 @@ class Navbar extends HTMLElement {
             <div class="footer_navbar">
                 <button class="toggle-mode">
                     <img src="../../images/navbar/solar_moon-bold.png" alt="Tema" class="mode-icon" />
-                    <span>Modo Escuro</span>
                 </button>
             </div>
         </div>
@@ -218,14 +217,12 @@ class Navbar extends HTMLElement {
                 document.documentElement.style.setProperty('--background-color', '#DADADA');
                 document.documentElement.style.setProperty('--text-color', '#161616');
                 document.documentElement.style.setProperty('--background-image', 'radial-gradient(var(--lightGreen) 5%, transparent 0)');
-                modeText.textContent = "Modo Escuro";
                 modeIcon.src = "../../images/navbar/solar_sun-bold.png";
             } else {
                 // Modo escuro
                 document.documentElement.style.setProperty('--background-color', '#161616');
                 document.documentElement.style.setProperty('--text-color', '#DADADA');
                 document.documentElement.style.setProperty('--background-image', 'radial-gradient(var(--darkGreen) 5%, transparent 0)');
-                modeText.textContent = "Modo Claro";
                 modeIcon.src = "../../images/navbar/solar_moon-bold.png";
             }
     

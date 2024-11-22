@@ -260,7 +260,7 @@ class Footer extends HTMLElement {
                     <p>Copyright © 2024 Game Store.</p>
                     <div class="footer-links">
                         <a href="#">Suas opções de privacidade</a>
-                        <a href="#">Privacidade dos Dados de Saúde do Consumidor</a>
+                        <a href="https://idec.org.br/politica-de-privacidade">Privacidade dos Dados de Saúde do Consumidor</a>
                     </div>
                     <p>Termos e condições. Aviso de privacidade. Preferência de cookies</p>
                 </div>
