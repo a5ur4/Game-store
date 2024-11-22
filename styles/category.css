@@ -9,10 +9,9 @@ header {
 header div {
     margin-right: 20px;
     font-weight: 700;
-    text-transform: uppercase;
     position: absolute;
     top: 35%;
-    left: 80%;
+    width: 90%;
 }
 
 header div h1 {
@@ -22,15 +21,15 @@ header div h1 {
 }
 
 header div hr {
-    width: 300%;
-    margin-left: -400px;
-    margin-top: 10px;
+    width: 40%;
+    margin-left: 650px;
 }
 
 header img {
     width: 100%;
     height: 350px;
     object-fit: cover;
+    filter: brightness(50%);
 }
 
 .container {
