@@ -216,7 +216,7 @@ class Navbar extends HTMLElement {
                 // Modo claro
                 document.documentElement.style.setProperty('--background-color', '#DADADA');
                 document.documentElement.style.setProperty('--text-color', '#161616');
-                document.documentElement.style.setProperty('--background-image', 'radial-gradient(var(--lightGreen) 5%, transparent 0)');
+                document.documentElement.style.setProperty('--background-image', 'radial-gradient(var(--lightGreen) 8%, transparent 0)');
                 modeIcon.src = "../../images/navbar/solar_sun-bold.png";
             } else {
                 // Modo escuro

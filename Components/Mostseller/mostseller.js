@@ -17,7 +17,7 @@ class Mostseller extends HTMLElement {
         <style>
             .box-container {
                 display: flex;
-                width: 90%;
+                width: 900px;
                 max-width: 900px;
                 gap: 20px;
                 margin: 20px;

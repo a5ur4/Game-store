@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
                 /* Footer */
                 .footer {
                     margin-top: 40px;
-                    background-color: #161616;
+                    background: rgba(0, 0, 0, 0.8);
                 }
 
                 .payment-icons {
@@ -31,13 +31,13 @@ class Footer extends HTMLElement {
                 }
 
                 .footer-column h3 {
-                    color: #ffffff;
+                    color: var(--white);
                     font-weight: bold;
                     margin-bottom: 10px;
                 }
 
                 .footer-column p {
-                    color: #ffffff;
+                    color: var(--white);
                     font-size: 14px;
                     margin-bottom: 10px;
                 }
@@ -51,7 +51,7 @@ class Footer extends HTMLElement {
                 }
 
                 .footer-column ul li a {
-                    color: #ffffff;
+                    color: var(--white);
                     text-decoration: none;
                     font-size: 14px;
                     transition: color 0.3s;
@@ -68,7 +68,7 @@ class Footer extends HTMLElement {
                     padding: 10px;
                     margin-top: 10px;
                     border: 1px solid #1A9F1A;
-                    background: #121212;
+                    background: rgba(0, 0, 0, 0.5);
                     color: #ffffff;
                     border-radius: 5px;
                 }
@@ -101,6 +101,7 @@ class Footer extends HTMLElement {
                     font-size: 18px;
                     margin-bottom: 10px;
                     margin-right: 10px;
+                    color: var(--white);
                 }
 
                 .social-media a {
@@ -124,7 +125,7 @@ class Footer extends HTMLElement {
                     margin-right: 4%;
                     margin-top: 40px;
                     font-size: 12px;
-                    color: #ddd;
+                    color: var(--white);
                     padding-bottom: 20px;
                     display: flex;
                     justify-content: space-between;
