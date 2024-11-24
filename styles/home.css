@@ -1,17 +1,20 @@
-/* style.css */
-@import"../styles/global.css";
+/* Importa estilos globais */
+@import "../styles/global.css";
 
+/* Estilo para o container principal das cartas */
 .cards {
     margin-top: 40px;
     margin-bottom: -10px;
 }
 
+/* Estilo para títulos dentro do componente cards */
 .cards h1 {
     font-size: 26px;
     margin-top: 40px;
     margin-left: 90px;
 }
 
+/* Estilo para links no título */
 .cards h1 a {
     color: var(--lightGreen);
     text-decoration: none;
@@ -20,15 +23,17 @@
 }
 
 .cards h1 a:hover {
-    color: var(--darkGreen);
+    color: var(--darkGreen); /* Efeito hover */
 }
 
+/* Linha separadora para o componente cards */
 .cards hr {
     width: 80%;
     margin-left: 130px;
     margin-top: 10px;
 }
 
+/* Container para os produtos mais vendidos */
 .top_sales {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +42,7 @@
     margin-top: 20px;
 }
 
+/* Estilo para lista geral de vendas */
 .sales {
     display: flex;
     flex-wrap: wrap;
@@ -44,6 +50,7 @@
     padding: 20px;
 }
 
+/* Estilo para banners */
 .banners {
     display: flex;
     flex-wrap: wrap;
@@ -53,11 +60,13 @@
     margin-bottom: 40px;
 }
 
+/* Ajusta o tamanho e o comportamento dos banners */
 .banners img {
     width: 45%;
-    cursor: pointer;
+    cursor: pointer; /* Indica que o banner é clicável */
 }
 
+/* Container para o carrossel de cartas */
 .cards-carousel {
     display: flex;
     overflow: hidden;
@@ -67,17 +76,19 @@
     margin-bottom: 20px;
 }
 
+/* Estilo para o conteúdo interno do carrossel */
 .cards-carousel-inner {
     display: flex;
-    animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite; /* Animação contínua */
 }
 
+/* Ajuste para os componentes card dentro do carrossel */
 .cards-carousel .card-component {
     min-width: 200px; 
     margin: 0 10px;
 }
 
-/* Animação de rolagem */
+/* Animação de rolagem do carrossel */
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -86,4 +97,3 @@
         transform: translateX(-100%);
     }
 }
-

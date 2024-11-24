@@ -65,7 +65,8 @@
 .objective-images .image-large {
     width: 300px;
     height: 300px;
-    background: #333;
+    background: url('https://www.cnet.com/a/img/resize/43bf7152f39f90a03df23c97a8a7ebb9a09ea520/hub/2022/02/23/f12a8db7-d99b-4b8d-9b09-d84f12661cf7/elden-ring-plakat.jpg?auto=webp&fit=bounds&height=1200&precrop=571,571,x357,y149&width=1200');
+    background-size: cover;
     border-radius: 8px;
 }
 
@@ -80,6 +81,21 @@
     height: 92px;
     background: #444;
     border-radius: 8px;
+}
+
+.objective-images .image-small:nth-child(1) {
+    background: url('https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/cWZlv5HCWi4sGKuwVRO4c8Xg.png');
+    background-size: cover;
+}
+
+.objective-images .image-small:nth-child(2) {
+    background: url('https://image.api.playstation.com/vulcan/ap/rnd/202405/3123/21a60345b63762324e97658fce8d3c1fa35dfc3dd9555629.jpg');
+    background-size: cover;
+}
+
+.objective-images .image-small:nth-child(3) {
+    background: url('https://store-images.s-microsoft.com/image/apps.16930.13817186670444302.148c432a-9fce-4c7d-bf13-8a2bd3a527b3.99d16324-9915-41d7-a388-fa5dd98940cb?q=90&w=177&h=177');
+    background-size: cover;
 }
 
 .about {
@@ -121,6 +137,14 @@
 .about-content p {
     font-size: 18px;
     text-align: justify;
+}
+
+.about-content img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    fill: var(--lightGreen);
 }
 
 .social-media {

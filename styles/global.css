@@ -1,3 +1,4 @@
+/* Adiciona as fontes Montserrat e Silkscreen via @font-face */
 @font-face {
     font-family: 'Montserrat', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap');
@@ -8,6 +9,7 @@
     src: url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 }
 
+/* Declaração de variáveis CSS para reutilização */
 :root {
     --white: #DADADA;
     --black: #161616;
@@ -21,12 +23,14 @@
     --Silkscreen: 'Silkscreen', sans-serif;
 }
 
+/* Zera o padding e margin de todos os elementos para padronização */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo global do body */
 body {
     background-color: var(--background-color);
     background-image: var(--background-image);
@@ -37,6 +41,7 @@ body {
     align-items: center;
 }
 
+/* Estilo global do main */
 main {
     font-family: var(--Montserrat), sans-serif;
     width: 100%;
@@ -44,6 +49,7 @@ main {
     color: var(--text-color);
 }
 
+/* Estilos para a barra de pesquisa */
 .search-bar {
     align-items: center;
     display: flex;
@@ -64,5 +70,5 @@ main {
 .search-bar input:focus {
     outline: none;
     border: 2px solid var(--darkGreen);
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efeito de crescimento ao focar */
 }

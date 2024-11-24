@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Declaração do documento como HTML5 e definição do idioma como português brasileiro -->
     <meta charset="UTF-8">
+    <!-- Configuração para garantir que a página seja responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparecerá na aba do navegador -->
     <title>Home</title>
+    <!-- Link para o arquivo CSS específico da página home -->
     <link rel="stylesheet" href="../styles/home.css">
+    <!-- Scripts JavaScript para carregar os componentes do site de forma deferida -->
     <script src="../Components/Card/card.js" defer></script>
     <script src="../Components/Navbar/navbar.js" defer></script>
     <script src="../Components/Footer/footer.js" defer></script>
     <script src="../Components/Carroussel/carroussel.js" defer></script>
     <script src="../Componescriptles/sales.js" defer></script>
     <script src="../Components/Categories/categories.js" defer></script>
+    <!-- Ícone da página (favicon) exibido na aba do navegador -->
     <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
 </head>
 <body>
+    <!-- Componente de barra de navegação -->
     <nav-bar 
         logo="../../images/XboxLogo.svg" 
         title="Xbox series X/S" 
@@ -26,13 +33,17 @@
         ]'
     ></nav-bar>
     <main>
+        <!-- Componente de carrossel para exibir elementos de destaque -->
         <carousel-element></carousel-element>
+
+        <!-- Seção de mais vendidos com cards para jogos -->
         <div class="cards">
             <h1>Mais vendidos da semana.<a href="/Pages/exclusive.html"> Ver Todos.</a></h1>
             <hr/>
             <div class="top_sales">
+                <!-- Componentes reutilizáveis de card para exibir jogos mais vendidos -->
                 <card-component
-                image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
+                    image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                     badge="../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
                 <card-component
                     image="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png"
@@ -42,7 +53,10 @@
                     badge="../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00"></card-component>
             </div>
         </div>
+
+        <!-- Seção de promoções -->
         <div class="sales">
+            <!-- Componentes de promoções exibindo imagens e textos promocionais -->
             <sales-component text1="Consoles semi-novos" text2="Desconto de" text3="40%"
                 text4="Em consoles usados e recondicionados" image="../images/sales/Group11.png"></sales-component>
             <sales-component text1="Consoles + acessórios" text2="Leve 1 acessório" text3="Grátis"
@@ -50,10 +64,13 @@
             <sales-component text1="Jogos em oferta" text2="Compre2, leve 1" text3="Grátis"
                 text4="Apenas alguns jogos estão disponíveis" image="../images/sales/Group12.png"></sales-component>
         </div>
+
+        <!-- Seção de categorias -->
         <div class="cards">
             <h1>Categorias.<a href="../Pages/categories.html"> Ver Todas.</a></h1>
             <hr/>
             <div class="top_sales">
+                <!-- Componentes de categorias para exibir gêneros de jogos -->
                 <categories-component 
                     image="https://store-images.s-microsoft.com/image/apps.64063.13528912654162373.752dd58c-93b6-40eb-ba0f-2d5ce3229dff.ed5a34b6-3865-43aa-9137-230f6560f5ba?q=90&w=480&h=270" 
                     name="Ação" 
@@ -85,10 +102,14 @@
             </div>
             <hr>
         </div>
+
+        <!-- Seção de banners promocionais -->
         <div class="banners">
             <img src="../images/banners/Group 4.png" alt="">
             <img src="../images/banners/Group 5.png" alt="">
-        </div>    
+        </div>
+
+        <!-- Carrossel de cards para jogos -->
         <div class="cards-carousel">
             <div class="cards-carousel-inner">
                 <card-component
@@ -116,7 +137,9 @@
                 badge="../images/image7.svg" name="Diablo IV" subtitle="" price="R$ 80,00" onclick="window.location.href = 'Pages/catalog.html'">
             </card-component>
             </div>
-        </div>    
+        </div>
+
+        <!-- Componente de rodapé -->
         <footer-component id="footer-text"></footer-component>
     </main>
 </body>
