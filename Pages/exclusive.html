@@ -2,18 +2,28 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Configurações básicas de codificação e layout responsivo -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilo CSS exclusivo para a página -->
     <link rel="stylesheet" href="../styles/exclusive.css">
+
+    <!-- Scripts JavaScript para componentes reutilizáveis -->
     <script src="../Components/Navbar/navbar.js" defer></script>
     <script src="../Components/Footer/footer.js" defer></script>
     <script src="../Components/Card/card.js" defer></script>
     <script src="../Components/Mostseller/mostseller.js" defer></script>
+
+    <!-- Ícone da página (favicon) -->
     <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
+
+    <!-- Título da página -->
     <title>Exclusivos</title>
 </head>
 
 <body>
+    <!-- Componente de navegação reutilizável com ícone, título e links configurados -->
     <nav-bar logo="../../images/XboxLogo.svg" title="Xbox series X/S" links='[
         {"href": "../index.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
         {"href": "catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
@@ -21,14 +31,20 @@
         {"href": "categories.html", "icon": "../../images/navbar/categorias.svg", "label": "Categorias"},
         {"href": "about.html", "icon": "../../images/navbar/sobre.svg", "label": "Sobre"}
     ]'></nav-bar>
+
+    <!-- Conteúdo principal da página -->
     <main>
+        <!-- Seção de notícias em destaque no topo da página -->
         <header>
             <div class="news-card">
+                <!-- Imagem com descrição alternativa para acessibilidade -->
                 <img src="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                     alt="Arcane Temporada 2">
                 <div class="newscard-content">
-                    <p>entrega evolução de trama e musicais que abrilhantam narrativa</p>
+                    <!-- Texto descritivo da notícia -->
+                    <p>Entrega evolução de trama e musicais que abrilhantam narrativa</p>
                 </div>
+            </div>
             </div>
             <div class="news-card">
                 <img src="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
@@ -53,125 +69,118 @@
             </div>
         </header>
         <main>
+            <!-- Seção de destaques da página -->
             <section>
                 <h1>Destaques</h1>
-                <hr>
+                <hr> <!-- Linha divisória -->
                 <div class="highlights">
+                    <!-- Cada item de destaque é um link com imagem e descrição -->
                     <div>
                         <a href="">
                             <img src="../images/carroussel/Banner1.png" alt="Imagem Notícias">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus elementum vulputate.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus
+                                elementum vulputate.</p>
                         </a>
                     </div>
                     <div>
                         <a href="">
                             <img src="../images/carroussel/Banner1.png" alt="Imagem Notícias">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus elementum vulputate.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus
+                                elementum vulputate.</p>
                         </a>
                     </div>
                     <div>
                         <a href="">
                             <img src="../images/carroussel/Banner1.png" alt="Imagem Notícias">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus elementum vulputate.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus
+                                elementum vulputate.</p>
                         </a>
                     </div>
                     <div>
                         <a href="">
                             <img src="../images/carroussel/Banner1.png" alt="Imagem Notícias">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus elementum vulputate.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ex a tellus
+                                elementum vulputate.</p>
                         </a>
                     </div>
                 </div>
             </section>
+            <!-- Seção dos jogos mais vendidos -->
             <section>
                 <h1>Mais Vendidos</h1>
                 <hr>
                 <div class="most_sales">
+                    <!-- Uso do componente personalizado 'most-seller' -->
+                    <!-- Cada atributo define as propriedades do componente -->
                     <most-seller
                         image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
-                        name="Halo Infinite"
-                        subtitle=""
-                        price="R$ 99,90"
-                        previous-price="R$ 129,90"
-                        genre1="Aventura"
-                        genre2="RPG"
-                        genre3="Ação"
-                        rating="⭐⭐⭐⭐"
-                        badge="../images/image7.svg"
-                        badge-region="Global"
-                    ></most-seller>       
+                        name="Halo Infinite" subtitle="" price="R$ 99,90" previous-price="R$ 129,90" genre1="Aventura"
+                        genre2="RPG" genre3="Ação" rating="⭐⭐⭐⭐" badge="../images/image7.svg" badge-region="Global">
+                    </most-seller>
                     <most-seller
                         image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
-                        name="Halo Infinite"
-                        subtitle=""
-                        price="R$ 99,90"
-                        previous-price="R$ 129,90"
-                        genre1="Aventura"
-                        genre2="RPG"
-                        genre3="Ação"
-                        rating="⭐⭐⭐⭐"
-                        badge="../images/image7.svg"
-                        badge-region="Global"
-                    ></most-seller>       
+                        name="Halo Infinite" subtitle="" price="R$ 99,90" previous-price="R$ 129,90" genre1="Aventura"
+                        genre2="RPG" genre3="Ação" rating="⭐⭐⭐⭐" badge="../images/image7.svg"
+                        badge-region="Global"></most-seller>
                     <most-seller
                         image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
-                        name="Halo Infinite"
-                        subtitle=""
-                        price="R$ 99,90"
-                        previous-price="R$ 129,90"
-                        genre1="Aventura"
-                        genre2="RPG"
-                        genre3="Ação"
-                        rating="⭐⭐⭐⭐"
-                        badge="../images/image7.svg"
-                        badge-region="Global"
-                    ></most-seller>                
+                        name="Halo Infinite" subtitle="" price="R$ 99,90" previous-price="R$ 129,90" genre1="Aventura"
+                        genre2="RPG" genre3="Ação" rating="⭐⭐⭐⭐" badge="../images/image7.svg"
+                        badge-region="Global"></most-seller>
                 </div>
             </section>
+            <!-- Seção de jogos exclusivos -->
             <section>
                 <h1>Exclusivos. <a href="catalog.html">Ver todos.</a></h1>
                 <hr>
+                <!-- Barra de pesquisa -->
                 <div class="search-bar">
                     <input type="search" id="search" placeholder="Pesquisar jogos">
                 </div>
                 <div class="top_sales">
+                    <!-- Uso do componente personalizado 'card-component' -->
+                    <!-- Define propriedades do cartão, como imagem, nome e preço -->
                     <card-component
-                    image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
-                        badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
+                        image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
+                        badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00">
+                    </card-component>
                     <card-component
                         image="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png"
                         badge="../../images/image7.svg" name="Doom Eternal" price="R$ 70,00"></card-component>
                     <card-component
                         image="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd"
-                        badge="../../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00"></card-component>
+                        badge="../../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty"
+                        price="R$ 80,00"></card-component>
                     <card-component
                         image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                         badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
                 </div>
                 <div class="top_sales">
                     <card-component
-                    image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
+                        image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                         badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
                     <card-component
                         image="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png"
                         badge="../../images/image7.svg" name="Doom Eternal" price="R$ 70,00"></card-component>
                     <card-component
                         image="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd"
-                        badge="../../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00"></card-component>
+                        badge="../../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty"
+                        price="R$ 80,00"></card-component>
                     <card-component
                         image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                         badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
                 </div>
                 <div class="top_sales">
                     <card-component
-                    image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
+                        image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                         badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
                     <card-component
                         image="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png"
                         badge="../../images/image7.svg" name="Doom Eternal" price="R$ 70,00"></card-component>
                     <card-component
                         image="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd"
-                        badge="../../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00"></card-component>
+                        badge="../../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty"
+                        price="R$ 80,00"></card-component>
                     <card-component
                         image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
                         badge="../../images/image7.svg" name="Halo Infinite" price="R$ 100,00"></card-component>
@@ -182,7 +191,7 @@
     </main>
     <script>
         // Função para filtrar jogos com base no termo de pesquisa
-        document.getElementById("search").addEventListener("input", function() {
+        document.getElementById("search").addEventListener("input", function () {
             const searchTerm = this.value.toLowerCase();
             const cards = document.querySelectorAll("card-component");
 

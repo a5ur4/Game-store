@@ -1,6 +1,7 @@
-@import"../styles/global.css";
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import "../styles/global.css"; /* Importa os estilos globais */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap'); /* Importa a fonte 'Silkscreen' do Google Fonts */
 
+/* Banner principal com imagem de fundo e alinhamento do conteúdo à esquerda */
 .banners {
     background-image: url("../images/Group 16.png");
     width: 100%;
@@ -8,26 +9,29 @@
     justify-content: left;
 }
 
+/* Div interna do banner com fundo semitransparente */
 .banners div {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
     width: 50%;
     height: 100%;
     padding-left: 40px;
 }
 
+/* Texto do banner */
 .banners div h2 {
     color: white;
     font-size: 15px;
-    font-family: var(--Silkscreen);
+    font-family: var(--Silkscreen); /* Usa a fonte 'Silkscreen' */
     font-weight: 700;
     padding-top: 100px;
     padding-left: 50px;
     text-align: center;
 }
 
+/* Estilo para o contêiner de objetivos */
 .objective {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     border-radius: 10px;
     width: 90%;
     margin: 20px 100px;
@@ -36,18 +40,21 @@
     margin-bottom: 50px;
 }
 
+/* Título dos objetivos */
 .objective h2 {
     font-size: 22px;
     font-family: var(--Silkscreen);
     color: var(--lightGreen);
 }
 
+/* Conteúdo dos objetivos com layout flexível */
 .objective-content {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre os elementos */
     justify-content: space-between;
 }
 
+/* Texto dentro do conteúdo de objetivos */
 .objective-content p {
     font-size: 18px;
     width: 90%;
@@ -56,26 +63,30 @@
     color: var(--white);
 }
 
+/* Contêiner para as imagens relacionadas aos objetivos */
 .objective-images {
     display: flex;
     margin-top: 20px;
     gap: 10px;
 }
 
+/* Imagem grande dentro dos objetivos */
 .objective-images .image-large {
     width: 300px;
     height: 300px;
     background: url('https://www.cnet.com/a/img/resize/43bf7152f39f90a03df23c97a8a7ebb9a09ea520/hub/2022/02/23/f12a8db7-d99b-4b8d-9b09-d84f12661cf7/elden-ring-plakat.jpg?auto=webp&fit=bounds&height=1200&precrop=571,571,x357,y149&width=1200');
-    background-size: cover;
+    background-size: cover; /* Ajusta a imagem ao tamanho do contêiner */
     border-radius: 8px;
 }
 
+/* Contêiner para imagens pequenas organizadas em coluna */
 .objective-images .image-small-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Estilo padrão para imagens pequenas */
 .objective-images .image-small {
     width: 92px;
     height: 92px;
@@ -83,26 +94,31 @@
     border-radius: 8px;
 }
 
+/* Imagem específica - primeira */
 .objective-images .image-small:nth-child(1) {
     background: url('https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/cWZlv5HCWi4sGKuwVRO4c8Xg.png');
     background-size: cover;
 }
 
+/* Imagem específica - segunda */
 .objective-images .image-small:nth-child(2) {
     background: url('https://image.api.playstation.com/vulcan/ap/rnd/202405/3123/21a60345b63762324e97658fce8d3c1fa35dfc3dd9555629.jpg');
     background-size: cover;
 }
 
+/* Imagem específica - terceira */
 .objective-images .image-small:nth-child(3) {
     background: url('https://store-images.s-microsoft.com/image/apps.16930.13817186670444302.148c432a-9fce-4c7d-bf13-8a2bd3a527b3.99d16324-9915-41d7-a388-fa5dd98940cb?q=90&w=177&h=177');
     background-size: cover;
 }
 
+/* Seção 'Sobre' com margens superiores e inferiores */
 .about {
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
+/* Título da seção 'Sobre' */
 .about h2 {
     font-size: 26px;
     font-family: var(--Silkscreen);
@@ -112,6 +128,7 @@
     text-align: center;
 }
 
+/* Linha horizontal estilizada na seção 'Sobre' */
 .about hr {
     width: 80%;
     margin-left: 130px;
@@ -119,12 +136,14 @@
     border: 1px solid var(--lightGreen);
 }
 
+/* Imagem na seção 'Sobre' */
 .about img {
     width: 225px;
     height: 300px;
     border-radius: 8px;
 }
 
+/* Conteúdo principal da seção 'Sobre' */
 .about-content {
     width: 70%;
     display: flex;
@@ -134,19 +153,21 @@
     justify-content: space-between;
 }
 
+/* Texto dentro da seção 'Sobre' */
 .about-content p {
     font-size: 18px;
-    text-align: justify;
+    text-align: justify; /* Texto justificado */
 }
 
+/* Imagem na seção 'Sobre' */
 .about-content img {
     width: 200px;
     height: 200px;
     padding: 10px;
     border-radius: 8px;
-    fill: var(--lightGreen);
 }
 
+/* Ícones ou links de redes sociais */
 .social-media {
     display: flex;
     gap: 5px;
@@ -154,6 +175,7 @@
     margin-top: 20px;
 }
 
+/* Estilo para o mapa na seção de contato */
 .map {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -167,6 +189,7 @@
     justify-content: space-between;
 }
 
+/* Estiliza o iframe do mapa */
 iframe {
     width: 50%;
     height: 350px;
@@ -174,6 +197,7 @@ iframe {
     border: none;
 }
 
+/* Estilo para o formulário de contato */
 .map form {
     display: flex;
     flex-direction: column;
@@ -182,17 +206,20 @@ iframe {
     height: 100%;
 }
 
+/* Título do formulário */
 .map form h2 {
     font-size: 22px;
     font-family: var(--Silkscreen);
     color: var(--lightGreen);
 }
 
+/* Labels do formulário */
 .map form label {
     font-size: 18px;
     color: var(--white);
 }
 
+/* Campos de entrada do formulário */
 .map form input {
     width: 100%;
     padding: 5px;
@@ -204,12 +231,14 @@ iframe {
     transition: 0.2s ease-in-out;
 }
 
+/* Efeito ao focar nos campos de entrada */
 .map form input:focus {
     outline: none;
     transform: scale(1.02);
     border: 1px solid var(--lightGreen);
 }
 
+/* Campo de texto maior (textarea) */
 .map form textarea {
     width: 100%;
     padding: 5px;
@@ -222,12 +251,14 @@ iframe {
     transition: 0.2s ease-in-out;
 }
 
+/* Efeito ao focar no campo de texto */
 .map form textarea:focus {
     outline: none;
     transform: scale(1.02);
     border: 1px solid var(--lightGreen);
 }
 
+/* Botão do formulário */
 .map form button {
     width: 100%;
     padding: 10px;
@@ -235,11 +266,13 @@ iframe {
     border: none;
     background-color: var(--lightGreen);
     color: var(--white);
+    font-weight: bold;
     font-size: 18px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
+/* Efeito ao passar o mouse no botão */
 .map form button:hover {
     background-color: var(--darkGreen);
 }

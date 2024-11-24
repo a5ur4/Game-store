@@ -44,6 +44,9 @@ class Carroussel extends HTMLElement {
             .carousel-controls button:nth-child(1) {
                 transform: rotate(180deg);
             }
+            .carousel-controls button:nth-child(1):hover {
+                transform: rotate(180deg) scale(1.2);
+            }
             .progress-bar-container {
                 display: flex;
                 justify-content: center;
@@ -54,7 +57,8 @@ class Carroussel extends HTMLElement {
                 height: 15px;
                 margin: 0 5px;
                 border-radius: 50%;
-                background-color: #ddd;
+                border: 2px solid var(--darkGreen);
+                background-color: var(--background-color);
                 transition: background-color 0.3s;
             }
             .progress-bar.active {
@@ -67,14 +71,14 @@ class Carroussel extends HTMLElement {
             <div class="carousel-controls">
                 <button id="prev">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="30" cy="30" r="30" fill="#161616"/>
-                        <path d="M37.6771 31.4444L27.4002 41.7212L25.3264 39.6474L34.2836 30.6903L34.5664 30.4074L34.2836 30.1246L25.3264 21.1674L27.4002 19.0936L37.6771 29.3705C37.6771 29.3705 37.6771 29.3705 37.6771 29.3705C37.952 29.6456 38.1065 30.0185 38.1065 30.4074C38.1065 30.7963 37.952 31.1693 37.6771 31.4443C37.6771 31.4443 37.6771 31.4443 37.6771 31.4444Z" fill="#1A9F1A" stroke="#1A9F1A" stroke-width="0.8"/>
+                    <circle cx="30" cy="30" r="30" fill="#161616"/>
+                    <path d="M37.6771 31.4444L27.4002 41.7212L25.3264 39.6474L34.2836 30.6903L34.5664 30.4074L34.2836 30.1246L25.3264 21.1674L27.4002 19.0936L37.6771 29.3705C37.6771 29.3705 37.6771 29.3705 37.6771 29.3705C37.952 29.6456 38.1065 30.0185 38.1065 30.4074C38.1065 30.7963 37.952 31.1693 37.6771 31.4443C37.6771 31.4443 37.6771 31.4443 37.6771 31.4444Z" fill="#1A9F1A" stroke="#1A9F1A" stroke-width="0.8"/>
                     </svg>
                 </button>
                 <button id="next">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="30" cy="30" r="30" fill="#161616"/>
-                        <path d="M37.6771 31.4444L27.4002 41.7212L25.3264 39.6474L34.2836 30.6903L34.5664 30.4074L34.2836 30.1246L25.3264 21.1674L27.4002 19.0936L37.6771 29.3705C37.6771 29.3705 37.6771 29.3705 37.6771 29.3705C37.952 29.6456 38.1065 30.0185 38.1065 30.4074C38.1065 30.7963 37.952 31.1693 37.6771 31.4443C37.6771 31.4443 37.6771 31.4443 37.6771 31.4444Z" fill="#1A9F1A" stroke="#1A9F1A" stroke-width="0.8"/>
+                    <circle cx="30" cy="30" r="30" fill="#161616"/>
+                    <path d="M37.6771 31.4444L27.4002 41.7212L25.3264 39.6474L34.2836 30.6903L34.5664 30.4074L34.2836 30.1246L25.3264 21.1674L27.4002 19.0936L37.6771 29.3705C37.6771 29.3705 37.6771 29.3705 37.6771 29.3705C37.952 29.6456 38.1065 30.0185 38.1065 30.4074C38.1065 30.7963 37.952 31.1693 37.6771 31.4443C37.6771 31.4443 37.6771 31.4443 37.6771 31.4444Z" fill="#1A9F1A" stroke="#1A9F1A" stroke-width="0.8"/>
                     </svg>
                 </button>
             </div>

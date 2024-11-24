@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorias</title>
     <link rel="stylesheet" href="../styles/category.css">
+    <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
+    <!-- Scripts Deferidos -->
     <script src="../Components/Card/card.js" defer></script>
     <script src="../Components/Navbar/navbar.js" defer></script>
     <script src="../Components/Footer/footer.js" defer></script>
     <script src="../Components/Carroussel/carroussel.js" defer></script>
     <script src="../Components/Sales/sales.js" defer></script>
     <script src="../Components/Categories/categories.js" defer></script>
-    <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
 </head>
 <body>
+    <!-- Navbar -->
     <nav-bar 
         logo="../../images/XboxLogo.svg" 
         title="Xbox series X/S" 
@@ -25,61 +27,71 @@
             {"href": "about.html", "icon": "../../images/navbar/sobre.svg", "label": "Sobre"}
         ]'
     ></nav-bar>
+
+    <!-- Main Content -->
     <main>
-        <div class="container">
+        <!-- Categorias -->
+        <section class="container">
+            <!-- Categoria: Ação -->
             <div class="category-card">
                 <a href="categories/Action.html">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.1920x1080.jpg?t=1728574899" alt="">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.1920x1080.jpg?t=1728574899" alt="Imagem de ação">
                     <h2>Ação</h2>
                 </a>
             </div>
+            <!-- Categoria: FPS -->
             <div class="category-card">
                 <a href="categories/FPS.html">
-                    <img src="https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobyl_GSCGameWorld_S1_2560x1440-7cc8db55646ee7b969c48defed6963f4" alt="">
+                    <img src="https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobyl_GSCGameWorld_S1_2560x1440-7cc8db55646ee7b969c48defed6963f4" alt="Imagem FPS">
                     <h2>FPS</h2>
                 </a>
             </div>
+            <!-- Categoria: RPG -->
             <div class="category-card">
                 <a href="categories/RPG.html">
-                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/2820/h12URI7MdswtFPFHpkppNh2z.png" alt="">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/2820/h12URI7MdswtFPFHpkppNh2z.png" alt="Imagem RPG">
                     <h2>RPG</h2>
                 </a>
             </div>
-        </div>
-        <div class="container">
+        </section>
+        <section class="container">
+            <!-- Outras Categorias -->
             <div class="category-card">
                 <a href="categories/Terror.html">
-                    <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/03/16/resident-evil-4-remake-jogo-e1678975680521-qeffi8m0d202.jpg" alt="">
+                    <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/03/16/resident-evil-4-remake-jogo-e1678975680521-qeffi8m0d202.jpg" alt="Imagem Terror">
                     <h2>Terror</h2>
                 </a>
             </div>
             <div class="category-card">
                 <a href="categories/Plataform.html">
-                    <img src="https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?q=90&w=480&h=270" alt="">
+                    <img src="https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?q=90&w=480&h=270" alt="Imagem Plataforma">
                     <h2>Plataforma</h2>
                 </a>
             </div>
             <div class="category-card">
                 <a href="categories/Simulation.html">
-                    <img src="https://store-images.s-microsoft.com/image/apps.14580.14550648823552491.458517e5-6b50-4124-b28b-b87004bdb3d1.f9bbe86e-3b76-4300-ad5b-b685c42776cf?q=90&w=480&h=270" alt="">
+                    <img src="https://store-images.s-microsoft.com/image/apps.14580.14550648823552491.458517e5-6b50-4124-b28b-b87004bdb3d1.f9bbe86e-3b76-4300-ad5b-b685c42776cf?q=90&w=480&h=270" alt="Imagem Simulação">
                     <h2>Simulação</h2>
                 </a>
             </div>
-        </div>
-        <div class="container">
+        </section>
+        <section class="container">
+            <!-- Últimas Categorias -->
             <div class="category-card">
                 <a href="categories/Running.html">
-                    <img src="https://sm.ign.com/ign_br/news/s/several-fo/several-forza-horizon-developers-leave-playground-games-and_7u97.jpg" alt="">
+                    <img src="https://sm.ign.com/ign_br/news/s/several-fo/several-forza-horizon-developers-leave-playground-games-and_7u97.jpg" alt="Imagem Corrida">
                     <h2>Corrida</h2>
                 </a>
             </div>
             <div class="category-card">
                 <a href="categories/Fighting.html">
-                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/1408/l3bg7nmfPpPzam5jOVlaUFww.jpg" alt="">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/1408/l3bg7nmfPpPzam5jOVlaUFww.jpg" alt="Imagem Luta">
                     <h2>Luta</h2>
                 </a>
             </div>
-        </div>
+        </section>
+
+        <!-- Footer -->
         <footer-component></footer-component>
     </main>
 </body>

@@ -1,5 +1,6 @@
-@import"../styles/global.css";
+@import "../styles/global.css"; /* Importa os estilos globais */
 
+/* Vendas em destaque com layout flexível */
 .top_sales {
     display: flex;
     flex-wrap: wrap;
@@ -8,24 +9,27 @@
     margin-top: 20px;
 }
 
+/* Linha horizontal com espaçamento */
 hr {
     width: 80%;
     margin: 20px auto;
-    border: 1px solid var(--lightGreen);
-} 
+    border: 1px solid var(--lightGreen); /* Cor personalizada */
+}
 
+/* Botão "Ver Mais" com estilo interativo */
 .seeMoreButton {
-    cursor: pointer;
+    cursor: pointer; /* Indica que é clicável */
     display: block;
     margin: 20px auto;
     border: none;
     background: none;
     font-size: 16px;
     font-weight: 700;
-    color: var(--lightGreen);
+    color: var(--lightGreen); /* Cor inicial */
     transition: 0.3s ease-in-out;
 }
 
 .seeMoreButton:hover {
+    /* Alteração de cor ao passar o mouse */
     color: var(--darkGreen);
 }
