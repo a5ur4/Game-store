@@ -2,16 +2,20 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Metadados básicos da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inclusão de scripts e estilos -->
     <script src="../Components/Navbar/navbar.js" defer></script>
     <script src="../Components/Footer/footer.js" defer></script>
     <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="../styles/about.css">
+    <!-- Título da página -->
     <title>Sobre</title>
 </head>
 
 <body>
+    <!-- Componente de barra de navegação -->
     <nav-bar logo="../../images/XboxLogo.svg" title="Xbox series X/S" links='[
         {"href": "../index.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
         {"href": "catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
@@ -20,12 +24,14 @@
         {"href": "about.html", "icon": "../../images/navbar/sobre.svg", "label": "Sobre"}
     ]'></nav-bar>
     <main>
+        <!-- Seção do cabeçalho -->
         <header class="banners">
             <div>
                 <h2>"If you require rest, now is the time. That is, after all, what the bonfire is for" <br>- Darkmoon
                     Knightess in Anor Londo</h2>
             </div>
         </header>
+        <!-- Seção do objetivo -->
         <section class="objective">
             <div class="objective-content">
                 <div>
@@ -36,6 +42,7 @@
                 </div>
                 <div>
                     <div class="objective-images">
+                        <!-- Imagens relacionadas ao objetivo -->
                         <div class="image-large"></div>
                         <div class="image-small-container">
                             <div class="image-small"></div>
@@ -47,6 +54,7 @@
             </div>
         </section>
 
+        <!-- Seção sobre quem somos -->
         <section class="about">
             <h2>Quem somos?</h2>
             <hr>
@@ -61,6 +69,7 @@
                         comprometidos em fomentar uma comunidade acolhedora e inclusiva, onde a paixão pelos jogos seja
                         o elo principal. Seja você um jogador casual, colecionador ou competidor, estamos aqui para
                         transformar sua jornada no universo dos games em algo extraordinário.</p>
+                    <!-- Botão para redes sociais -->
                     <div class="social-media">
                         <a href="#">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
@@ -116,24 +125,33 @@
             </div>
         </section>
 
+        <!-- Seção de contato e mapa -->
         <section class="map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.085320120019!2d-35.955301525108965!3d-8.294307983424455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98be8cf3157dd%3A0x98a0a3ecad4be817!2sCentro%20Universit%C3%A1rio%20UniFavip%20-%20Wyden%20-%20Entrada%20Principal!5e0!3m2!1spt-BR!2sbr!4v1732422352136!5m2!1spt-BR!2sbr"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <form action="">
-                <h2>Envie me uma mensagem</h2>
-                <label for="">Nome</label>
-                <input type="text" name="name" id="name">
-                <label for="">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="">Mensagem</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+                <form action="mailto:seuemail@dominio.com" method="post" enctype="text/plain">
+                    <h2>Envie-me uma mensagem</h2>
+                    <!-- Campo para o nome do usuário -->
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+    
+                    <!-- Campo para o email do usuário -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+    
+                    <!-- Campo para a mensagem -->
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+    
+                    <!-- Botão para enviar -->
+                    <button type="submit">Enviar</button>
+                </form>
         </section>
 
-        <footer-component id="footer-text"></footer-component>
+        <!-- Componente de rodapé -->
+        <footer-component></footer-component>
     </main>
 </body>
 

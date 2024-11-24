@@ -211,10 +211,9 @@ class Footer extends HTMLElement {
                     <div class="footer-column">
                         <h3>Registre-se</h3>
                         <p>e receba e-mails com ofertas, cupons e novidades da comunidade</p>
-                        <form id="register-form">
-                            <input type="text" placeholder="Escreva seu nome" required>
-                            <input type="email" placeholder="Escreva seu e-mail" required>
-                            <button type="submit">Enviar</button>
+                        <form id="newsletter-form">
+                            <input type="email" id="email" placeholder="Insira seu email" required />
+                            <button type="submit">Inscrever-se</button>
                         </form>
                         <div class="social-media">
                             <span>Siga-nos</span>
@@ -268,6 +267,22 @@ class Footer extends HTMLElement {
                 </footer>
             </footer>
         `;
+
+        // Adiciona funcionalidade ao formulário
+        const form = this.querySelector('#newsletter-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Previne recarregamento da página
+
+            // Captura o valor do email
+            const email = this.querySelector('#email').value;
+
+            // Lógica para enviar os dados (exemplo)
+            console.log(`Email inscrito: ${email}`);
+
+            // Simulação de envio bem-sucedido
+            alert('Obrigado por se inscrever!');
+            form.reset(); // Limpa o formulário após o envio
+        });
     }
 }
 

@@ -262,6 +262,23 @@ class Card extends HTMLElement {
             </div>
         `;
 
+        this.querySelectorAll('.share-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation(); // Evitar abertura do modal ao clicar em compartilhar
+                if (navigator.share) {
+                    navigator.share({
+                        title: name,
+                        text: `Confira este produto: ${name} - ${subtitle}`,
+                        url: window.location.href // URL atual da página
+                    })
+                    .then(() => console.log('Compartilhado com sucesso!'))
+                    .catch((error) => console.error('Erro ao compartilhar:', error));
+                } else {
+                    alert('O recurso de compartilhamento não é suportado neste navegador.');
+                }
+            });
+        });
+
         this.querySelector('.card').addEventListener('click', () => {
             this.querySelector('#product-modal').style.display = 'flex';
         });
