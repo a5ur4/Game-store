@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!-- Declaração do documento como HTML5 e definição do idioma como português brasileiro -->
     <meta charset="UTF-8">
@@ -19,19 +20,16 @@
     <!-- Ícone da página (favicon) exibido na aba do navegador -->
     <link rel="shortcut icon" href="../images/XboxLogo.svg" type="image/x-icon">
 </head>
+
 <body>
     <!-- Componente de barra de navegação -->
-    <nav-bar 
-        logo="../../images/XboxLogo.svg" 
-        title="Xbox series X/S" 
-        links='[
+    <nav-bar logo="../../images/XboxLogo.svg" title="Xbox series X/S" links='[
             {"href": "index.html", "icon": "../../images/navbar/home.svg", "label": "Início"},
             {"href": "/Pages/catalog.html", "icon": "../../images/navbar/catalogo.svg", "label": "Catálogo"},
             {"href": "/Pages/exclusive.html", "icon": "../../images/navbar/exclusivos.svg", "label": "Exclusivos"},
             {"href": "/Pages/categories.html", "icon": "../../images/navbar/categorias.svg", "label": "Categorias"},
             {"href": "/Pages/about.html", "icon": "../../images/navbar/sobre.svg", "label": "Sobre"}
-        ]'
-    ></nav-bar>
+        ]'></nav-bar>
     <main>
         <!-- Componente de carrossel para exibir elementos de destaque -->
         <carousel-element></carousel-element>
@@ -39,7 +37,7 @@
         <!-- Seção de mais vendidos com cards para jogos -->
         <div class="cards">
             <h1>Mais vendidos da semana.<a href="/Pages/exclusive.html"> Ver Todos.</a></h1>
-            <hr/>
+            <hr />
             <div class="top_sales">
                 <!-- Componentes reutilizáveis de card para exibir jogos mais vendidos -->
                 <card-component
@@ -50,7 +48,8 @@
                     badge="../images/image7.svg" name="Doom Eternal" price="R$ 70,00"></card-component>
                 <card-component
                     image="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd"
-                    badge="../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00"></card-component>
+                    badge="../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty"
+                    price="R$ 80,00"></card-component>
             </div>
         </div>
 
@@ -68,37 +67,30 @@
         <!-- Seção de categorias -->
         <div class="cards">
             <h1>Categorias.<a href="../Pages/categories.html"> Ver Todas.</a></h1>
-            <hr/>
+            <hr />
             <div class="top_sales">
                 <!-- Componentes de categorias para exibir gêneros de jogos -->
-                <categories-component 
-                    image="https://store-images.s-microsoft.com/image/apps.64063.13528912654162373.752dd58c-93b6-40eb-ba0f-2d5ce3229dff.ed5a34b6-3865-43aa-9137-230f6560f5ba?q=90&w=480&h=270" 
-                    name="Ação" 
-                    link="Pages/categories/Action.html"></categories-component>
-                <categories-component 
-                    image="https://imgs.search.brave.com/2y-kanl5oO31ZOi0m-sCwi2jnDrfpINHb6kWDugVEbs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMi10/ZWNodHVkby5nbGJp/bWcuY29tL1A5T2t3/RjJhZXA2UFhDZGJG/bTJIbkx6U0lpTT0v/MHgwOjEyMDB4Njc1/Lzk4NHgwL3NtYXJ0/L2ZpbHRlcnM6c3Ry/aXBfaWNjKCkvaS5z/My5nbGJpbWcuY29t/L3YxL0FVVEhfMDhm/YmY0OGJjMDUyNDg3/Nzk0M2ZlODZlNDMw/ODdlN2EvaW50ZXJu/YWxfcGhvdG9zL2Jz/LzIwMjMvVi9WL1NU/SUc4RFQ2ZW1kT3VL/WXo0NTh3L2NhbGwt/b2YtZHV0eS1tb2Rl/cm4td2FyZmFyZS0z/LmpwZw" 
-                    name="FPS" 
-                    link="Pages/categories/FPS.html"></categories-component>
-                <categories-component 
-                    image="https://sm.ign.com/ign_br/news/s/skyrim-mod/skyrim-mod-uses-chatgpt-and-other-ai-tools-to-give-npcs-a-me_z1x5.jpg" 
-                    name="RPG" 
-                    link="Pages/categories/RPG.html"></categories-component>
-                <categories-component 
-                    image="https://media.contentapi.ea.com/content/dam/eacom/dead-space/images/2022/10/dead-space-featured-image.jpg.adapt.crop191x100.1200w.jpg" 
-                    name="Terror" 
-                    link="Pages/categories/Terror.html"></categories-component>
-                <categories-component 
-                    image="https://store-images.s-microsoft.com/image/apps.3754.13510798886186647.c0e11caa-fdaa-466b-aa26-f52ce4feba84.b8c452aa-2dc1-4cec-9056-fc08b2ae404d?q=90&w=480&h=270" 
-                    name="Plataforma" 
-                    link="Pages/categories/Plataform.html"></categories-component>
-                <categories-component 
-                    image="https://store-images.s-microsoft.com/image/apps.33953.13806078025361171.9723cf5e-1e29-4d9d-ad0a-cc37a95bb75d.afabb748-2c30-4a7e-8072-2809a222192d?q=90&w=480&h=270" 
-                    name="Corrida" 
-                    link="Pages/categories/Running.html"></categories-component>
-                <categories-component 
-                    image="https://www.overloadgames.com.br/img/blog/mortal-kombat-1-conheca-tudo-sobre-o-novo-jogo/mortal-kombat-1-conheca-tudo-sobre-o-novo-jogo.webp" 
-                    name="Luta" 
-                    link="Pages/categories/Fighting.html"></categories-component>
+                <categories-component
+                    image="https://store-images.s-microsoft.com/image/apps.64063.13528912654162373.752dd58c-93b6-40eb-ba0f-2d5ce3229dff.ed5a34b6-3865-43aa-9137-230f6560f5ba?q=90&w=480&h=270"
+                    name="Ação" link="Pages/categories/Action.html"></categories-component>
+                <categories-component
+                    image="https://imgs.search.brave.com/2y-kanl5oO31ZOi0m-sCwi2jnDrfpINHb6kWDugVEbs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMi10/ZWNodHVkby5nbGJp/bWcuY29tL1A5T2t3/RjJhZXA2UFhDZGJG/bTJIbkx6U0lpTT0v/MHgwOjEyMDB4Njc1/Lzk4NHgwL3NtYXJ0/L2ZpbHRlcnM6c3Ry/aXBfaWNjKCkvaS5z/My5nbGJpbWcuY29t/L3YxL0FVVEhfMDhm/YmY0OGJjMDUyNDg3/Nzk0M2ZlODZlNDMw/ODdlN2EvaW50ZXJu/YWxfcGhvdG9zL2Jz/LzIwMjMvVi9WL1NU/SUc4RFQ2ZW1kT3VL/WXo0NTh3L2NhbGwt/b2YtZHV0eS1tb2Rl/cm4td2FyZmFyZS0z/LmpwZw"
+                    name="FPS" link="Pages/categories/FPS.html"></categories-component>
+                <categories-component
+                    image="https://sm.ign.com/ign_br/news/s/skyrim-mod/skyrim-mod-uses-chatgpt-and-other-ai-tools-to-give-npcs-a-me_z1x5.jpg"
+                    name="RPG" link="Pages/categories/RPG.html"></categories-component>
+                <categories-component
+                    image="https://media.contentapi.ea.com/content/dam/eacom/dead-space/images/2022/10/dead-space-featured-image.jpg.adapt.crop191x100.1200w.jpg"
+                    name="Terror" link="Pages/categories/Terror.html"></categories-component>
+                <categories-component
+                    image="https://store-images.s-microsoft.com/image/apps.3754.13510798886186647.c0e11caa-fdaa-466b-aa26-f52ce4feba84.b8c452aa-2dc1-4cec-9056-fc08b2ae404d?q=90&w=480&h=270"
+                    name="Plataforma" link="Pages/categories/Plataform.html"></categories-component>
+                <categories-component
+                    image="https://store-images.s-microsoft.com/image/apps.33953.13806078025361171.9723cf5e-1e29-4d9d-ad0a-cc37a95bb75d.afabb748-2c30-4a7e-8072-2809a222192d?q=90&w=480&h=270"
+                    name="Corrida" link="Pages/categories/Running.html"></categories-component>
+                <categories-component
+                    image="https://www.overloadgames.com.br/img/blog/mortal-kombat-1-conheca-tudo-sobre-o-novo-jogo/mortal-kombat-1-conheca-tudo-sobre-o-novo-jogo.webp"
+                    name="Luta" link="Pages/categories/Fighting.html"></categories-component>
             </div>
             <hr>
         </div>
@@ -114,28 +106,47 @@
             <div class="cards-carousel-inner">
                 <card-component
                     image="https://s2-ge.glbimg.com/hgj24eLzTOm5WcMh2gsJWPYibEU=/0x7:770x979/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/q/f/4xh4idQlWaQeyAhyDitQ/halo-infinite-capa-xbox-series-x.png"
-                    badge="../images/image7.svg" name="Halo Infinite" price="R$ 100,00" onclick="window.location.href = 'Pages/catalog.html'">
+                    badge="../images/image7.svg" name="Halo Infinite" price="R$ 100,00"
+                    onclick="window.location.href = 'Pages/catalog.html'">
                 </card-component>
                 <card-component
                     image="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png"
-                    badge="../images/image7.svg" name="Doom Eternal" price="R$ 70,00" onclick="window.location.href = 'Pages/catalog.html'">
+                    badge="../images/image7.svg" name="Doom Eternal" price="R$ 70,00"
+                    onclick="window.location.href = 'Pages/catalog.html'">
                 </card-component>
                 <card-component
                     image="https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd"
-                    badge="../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00" onclick="window.location.href = 'Pages/catalog.html'">
+                    badge="../images/image7.svg" name="Cyberpunk 2077" subtitle="phantom liberty" price="R$ 80,00"
+                    onclick="window.location.href = 'Pages/catalog.html'">
                 </card-component>
                 <card-component
-                image="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/06/dragon-ball-sparking-zero-cover-art.jpg"
-                badge="../images/image7.svg" name="Dragon Ball Sparking Zero" subtitle="" price="R$ 200,00" onclick="window.location.href = 'Pages/catalog.html'">
-            </card-component>
-            <card-component
-                image="https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/cWZlv5HCWi4sGKuwVRO4c8Xg.png"
-                badge="../images/image7.svg" name="Resident Evil 4" subtitle="Remake" price="R$ 70,00" onclick="window.location.href = 'Pages/catalog.html'">
-            </card-component>
-            <card-component
-                image="https://image.api.playstation.com/vulcan/ap/rnd/202405/3123/21a60345b63762324e97658fce8d3c1fa35dfc3dd9555629.jpg"
-                badge="../images/image7.svg" name="Diablo IV" subtitle="" price="R$ 80,00" onclick="window.location.href = 'Pages/catalog.html'">
-            </card-component>
+                    image="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/06/dragon-ball-sparking-zero-cover-art.jpg"
+                    badge="../images/image7.svg" name="Dragon Ball Sparking Zero" subtitle="" price="R$ 200,00"
+                    onclick="window.location.href = 'Pages/catalog.html'">
+                </card-component>
+                <card-component
+                    image="https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/cWZlv5HCWi4sGKuwVRO4c8Xg.png"
+                    badge="../images/image7.svg" name="Resident Evil 4" subtitle="Remake" price="R$ 70,00"
+                    onclick="window.location.href = 'Pages/catalog.html'">
+                </card-component>
+                <card-component
+                    image="https://image.api.playstation.com/vulcan/ap/rnd/202405/3123/21a60345b63762324e97658fce8d3c1fa35dfc3dd9555629.jpg"
+                    badge="../images/image7.svg" name="Diablo IV" subtitle="" price="R$ 80,00"
+                    onclick="window.location.href = 'Pages/catalog.html'">
+                </card-component>
+                <card-component
+                    image="https://upload.wikimedia.org/wikipedia/pt/8/8d/Hi-Fi_Rush_Xbox_Series_X_capa_digital.jpg"
+                    badge="../../images/image7.svg" name="Hi-Fi Rush" price="R$ 60,00" onclick="window.location.href = 'Pages/catalog.html'"></card-component>
+                <card-component
+                    image="https://store-images.s-microsoft.com/image/apps.34545.65328483881162508.89a95049-a2dc-4b27-8f56-0a4f5a72a393.e2e2902b-cce7-4ca0-9aba-5f8615c5d9ca?w=272"
+                    badge="../../images/image7.svg" name="Crash Bandicoot" subtitle="N'Sane Trilogy" price="R$ 70,00" onclick="window.location.href = 'Pages/catalog.html'"></card-component>
+                <card-component
+                    image="https://store-images.s-microsoft.com/image/apps.63195.13624715126573049.35e3abd5-bd41-4efb-bc2a-0bfbdd50b02a.d3291934-3236-4279-91eb-792123046d1d?w=272"
+                    badge="../../images/image7.svg" name="Avowed" price="Em Breve" onclick="window.location.href = 'Pages/catalog.html'"></card-component>
+                <card-component
+                    image="https://store-images.s-microsoft.com/image/apps.55056.13991012152837663.1297136a-f273-41f1-947f-59044c848c55.7dbf4684-b0de-4879-ba2e-c7460c910965?w=272"
+                    badge="../../images/image7.svg" name="Age of Empires II" subtitle="Definitive Edition"
+                    price="R$ 100,00" onclick="window.location.href = 'Pages/catalog.html'"></card-component>
             </div>
         </div>
 
@@ -143,4 +154,5 @@
         <footer-component id="footer-text"></footer-component>
     </main>
 </body>
+
 </html>

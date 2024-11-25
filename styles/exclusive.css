@@ -26,6 +26,11 @@ header {
     left: 0;
     z-index: 0;
     border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.news-card:hover img {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 /* Conteúdo sobreposto no cartão de notícias */
@@ -41,7 +46,8 @@ header {
 }
 
 .newscard-content p {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
     line-height: 1.5; /* Melhor legibilidade */
 }
 

@@ -30,9 +30,11 @@ class Categories extends HTMLElement {
             }
         </style>
         <div class="categories">
+            <!-- Link que envolve a imagem -->
             <a href="${link}">
                 <img src="${image}" alt="">
             </a>
+            <!-- Título da categoria -->
             <h3>${name}</h3>
         </div>
         `;

@@ -238,36 +238,48 @@ class Mostseller extends HTMLElement {
 
         </style>
             <div class="box-container">
+                <!-- Imagem do jogo com um botão para abrir o modal -->
                 <img src="${image}" alt="" class="game-img" id="open-modal-btn">
                 <div class="content">
                     <div class="info">
+                        <!-- Nome do jogo -->
                         <h2>${name}</h2>
+                        <!-- Gêneros do jogo -->
                         <div class="game-genres">
                             <span>${genre1}</span>, <span>${genre2}</span>, <span>${genre3}</span>
                         </div>
+                        <!-- Avaliação do jogo -->
                         <div class="game-rating">${rating}</div>
+                        <!-- Preço anterior, se disponível -->
                         ${previousPrice ? `<p class="price-previous">${previousPrice}</p>` : ''}
+                        <!-- Preço atual -->
                         <h3 class="price-current">${price}</h3>
+                        <!-- Informação sobre a região da chave -->
                         <p class="region-info">Verificar região da chave*</p>
                     </div>
                     <div class="buttons">
                         <div class="badges">
+                            <!-- Botão com a região do jogo -->
                             <div class="badgeConsole">
                                 <button class="global-btn1">${badgeRegion}</button>
                             </div>
+                            <!-- Imagem do badge -->
                             <div class="badgeConsole">
                                 <img src="${badge}" alt="">
                             </div>
                         </div>
+                        <!-- Botão para adicionar à lista de desejos -->
                         <button class="wishlist-button">
-                            <?xml version="1.0" encoding="utf-8"?>
-                                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- SVG do ícone de lista de desejos -->
+                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.46785 10.2658C4.47574 10.3372 4.48376 10.4094 4.49187 10.4823L4.61751 11.6131C4.7057 12.4072 4.78218 13.0959 4.91562 13.6455C5.05917 14.2367 5.29582 14.7937 5.78931 15.2354C6.28281 15.6771 6.86251 15.8508 7.46598 15.9281C8.02694 16.0001 8.71985 16 9.51887 16H14.8723C15.4201 16 15.9036 16 16.3073 15.959C16.7448 15.9146 17.1698 15.8162 17.5785 15.5701C17.9872 15.324 18.2731 14.9944 18.5171 14.6286C18.7422 14.291 18.9684 13.8637 19.2246 13.3797L21.7141 8.67734C22.5974 7.00887 21.3879 4.99998 19.5 4.99998L9.39884 4.99998C8.41604 4.99993 7.57525 4.99988 6.90973 5.09287C6.5729 5.13994 6.24284 5.21529 5.93326 5.34375L5.78941 4.04912C5.65979 2.88255 4.67375 2 3.5 2H3C2.44772 2 2 2.44771 2 3C2 3.55228 2.44772 4 3 4H3.5C3.65465 4 3.78456 4.11628 3.80164 4.26998L4.46785 10.2658Z" fill="black"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 19.5C14 18.1193 15.1193 17 16.5 17C17.8807 17 19 18.1193 19 19.5C19 20.8807 17.8807 22 16.5 22C15.1193 22 14 20.8807 14 19.5Z" fill="black"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 19.5C5 18.1193 6.11929 17 7.5 17C8.88071 17 10 18.1193 10 19.5C10 20.8807 8.88071 22 7.5 22C6.11929 22 5 20.8807 5 19.5Z" fill="black"/>
                             </svg>
                         </button>
+                        <!-- Botão para adicionar ao carrinho -->
                         <button class="cart-button">
+                            <!-- SVG do ícone de carrinho -->
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.4998 31.1354L15.3853 29.2104C7.87484 22.4 2.9165 17.8938 2.9165 12.3958C2.9165 7.88958 6.44567 4.375 10.9373 4.375C13.4748 4.375 15.9103 5.55625 17.4998 7.40833C19.0894 5.55625 21.5248 4.375 24.0623 4.375C28.554 4.375 32.0832 7.88958 32.0832 12.3958C32.0832 17.8938 27.1248 22.4 19.6144 29.2104L17.4998 31.1354Z" fill="black"/>
                             </svg>                        
@@ -275,18 +287,24 @@ class Mostseller extends HTMLElement {
                     </div>
                 </div>
             </div>
+            <!-- Modal para exibir mais detalhes do produto -->
             <div id="product-modal" class="modal">
                 <div class="modal-content">
+                    <!-- Botão para fechar o modal -->
                     <span class="close">&times;</span>
                     <div>
+                        <!-- Imagem do produto no modal -->
                         <img src="${image}" alt="">
                     </div>
                     <div>
+                        <!-- Nome e subtítulo do produto no modal -->
                         <h2>${name}</h2>
                         <h3>${subtitle}</h3>
                         <br>
+                        <!-- Descrição detalhada do produto -->
                         <p>Descrição detalhada do produto ou jogo. Informações sobre a história, jogabilidade, preço e outras
                             características importantes.</p>
+                        <!-- Plataforma e preço do produto -->
                         <p>Plataforma: Xbox Series X|S</p>
                         <p>Preço: ${price}</p>
                     </div>
