@@ -5,6 +5,7 @@ class Card extends HTMLElement {
         const name = this.getAttribute('name');
         const subtitle = this.getAttribute('subtitle') || '';
         const price = this.getAttribute('price');
+        // const description = this.getAttribute('description');
 
         this.innerHTML = `
         <style>
@@ -253,8 +254,10 @@ class Card extends HTMLElement {
                         <h2>${name}</h2>
                         <h3>${subtitle}</h3>
                         <br>
+                        <!-- Informações detalhadas do produto, poderia ser dinâmico, porém como o Backend não vai ser enviado junto, deixarei estático por momento -->
                         <p>Descrição detalhada do produto ou jogo. Informações sobre a história, jogabilidade, preço e outras
                             características importantes.</p>
+                        <!-- <p>$/{description}</p> -->
                         <p>Plataforma: Xbox Series X|S</p>
                         <p>Preço: ${price}</p>
                     </div>
