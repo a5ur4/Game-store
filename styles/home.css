@@ -1,6 +1,5 @@
 /* Importa estilos globais */
 @import "../styles/global.css";
-
 /* Estilo para o container principal das cartas */
 .cards {
     margin-top: 40px;
@@ -95,5 +94,32 @@
     }
     to {
         transform: translateX(-100%);
+    }
+}
+
+/* Estilo para responsividade em dispositivos menores */
+@media (max-width: 768px) {
+    /* Ajusta o tamanho dos banners para telas menores */
+    .banners img {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* Ajusta o tamanho dos componentes card para telas menores */
+    .cards-carousel .card-component {
+        min-width: 150px;
+    }
+
+    .cards h1 {
+        margin-left: 0;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .cards hr {
+        margin-left: 0;
+        width: 70%;
+        margin: 0 auto;
     }
 }

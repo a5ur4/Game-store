@@ -145,6 +145,43 @@ class Footer extends HTMLElement {
                 .footer-bottom a:hover {
                     text-decoration: underline;
                 }
+
+                @media screen and (max-width: 768px) {
+                    .footer-content {
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 20px;    
+                    }
+
+                    .footer-column {
+                        margin-bottom: 20px;
+                        margin-top: 20px;
+                    }
+
+                    .payment-icons {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
+                    .footer-column form button {
+                        width: 100%;
+                        margin-left: 0;
+                    }
+
+                    .social-media {
+                        margin-top: 30px;
+                        justify-content: center;
+                    }
+
+                    .social-media span {
+                        display: none;
+                    }
+
+                    .footer-bottom {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
             </style>
             <footer class="footer">
                 <div class="payment-icons">

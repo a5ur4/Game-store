@@ -72,3 +72,10 @@ main {
     border: 2px solid var(--darkGreen);
     transform: scale(1.1); /* Efeito de crescimento ao focar */
 }
+
+/* Estilo para responsividade em dispositivos menores */
+@media (max-width: 768px) {
+    main {
+        margin-top: 100px;
+    }
+}

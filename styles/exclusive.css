@@ -126,3 +126,55 @@ section hr {
     gap: 10px;
     margin-top: 20px;
 }
+
+/* Estilo para responsividade em dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    section {
+        text-align: center;
+    }
+    
+    section h1 {
+        margin-left: 0;
+    }
+    
+    section hr {
+        width: 70%;
+        margin-left: 0;
+        margin: 0 auto;
+    }
+
+    .highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-card {
+        margin: 10px;
+    }
+
+    .news-card img {
+        width: 100%;
+    }
+
+    .highlights div {
+        width: 90%;
+    }
+
+    .highlights div img {
+        width: 100%;
+    }
+
+    .most_sales {
+        margin-top: 20px;
+    }
+}

@@ -162,6 +162,66 @@ class Navbar extends HTMLElement {
             .navbar.collapsed .auth-buttons {
                 display: none;
             }
+
+            @media (max-width: 768px) {
+            .navbar {
+                width: 100%;
+                height: auto;
+                position: fixed;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+                padding-top: 20px;
+                border-radius: 0;
+                border: none;
+                background-color: rgba(0,0,0,0.9);
+            }
+
+            .navbar-title {
+                display: none;
+            }
+
+            .navbar.collapsed {
+                height: auto;
+                width: 100%;
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            .nav-links {
+                flex-direction: row;
+                display: none;
+            }
+
+            .navbar.collapsed .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0,0,0,0.8);
+            }
+                
+            .nav-link {
+                justify-content: center;
+                border: 1px solid #1A9F1A;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .navbar.collapsed .nav-link:hover {
+                width: 100%;
+                transform: scale(1.1);
+            }
+
+            .collapse-btn {
+                margin: 0;
+                transform: rotate(-90deg) scale(0.8);    
+            }
+
+            .navbar.collapsed .collapse-btn {
+                transform: rotate(90deg) scale(0.8);
+            }
         </style>
 
         <div class="navbar">

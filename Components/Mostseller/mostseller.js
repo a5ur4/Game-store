@@ -209,6 +209,33 @@ class Mostseller extends HTMLElement {
             .close:hover {
                 color: #ff0000;
             }
+
+            @media (max-width: 900px) {
+                .box-container {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .game-img {
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px 10px 0 0;
+                }
+
+                .game-img:hover {
+                    cursor: pointer;
+                    width: 100%;
+                    transform: scale(1.1);
+                }
+
+                .content {
+                    padding: 10px;
+                }
+
+                .info h2 {
+                    font-size: 20px;
+                }
+
         </style>
             <div class="box-container">
                 <img src="${image}" alt="" class="game-img" id="open-modal-btn">
