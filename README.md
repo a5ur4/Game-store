@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a game store application built using HTML, JavaScript, and CSS. It is designed to provide a platform for browsing and purchasing games.
+This is a university project for the web development class, it is a game store application built using only HTML, JavaScript and CSS. It is designed to provide a platform for browsing and buying games.
 
 ## Features
 
